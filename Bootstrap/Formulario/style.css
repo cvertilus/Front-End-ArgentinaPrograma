@@ -1,0 +1,17 @@
+.img-1{
+    background-image: url(imagen/naruto);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-2{
+    background-image: url(imagen/Luffy);
+    background-size: contain;
+    background-position: center;
+    
+}
+.img-3{
+    background-image: url(imagen/Goku);
+    background-size:contain;
+    background-position: center;
+}
