@@ -14,10 +14,8 @@
     border-bottom:2px solid green;
     background: #198754;
     margin-bottom: 5px;
-   
-
-
 }
+
 .nav-item a:hover{
     color:green;
 
@@ -31,7 +29,6 @@
 .navbar-toggler:focus{
     outline: none;
     box-shadow: none;
-
 
 }
 
