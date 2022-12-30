@@ -23,6 +23,9 @@ Rooms list:
             <th>
                 Room checkoutTime
             </th>
+            <th>
+                Select Room
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +38,11 @@ Rooms list:
             <td>{{room.ameninities | titlecase}}</td>
             <td>{{room.checkInTime | date}}</td>
             <td>{{room.checkOutTime | date}}</td>
+            <td>
+                <button class="btn btn-success" (click)="selectRoom(room)">
+                   Select
+                </button>
+            </td>
         </tr>
     </tbody>
     </table>

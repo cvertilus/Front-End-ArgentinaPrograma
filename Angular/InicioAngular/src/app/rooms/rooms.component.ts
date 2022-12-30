@@ -11,6 +11,7 @@ export class RoomsComponent implements OnInit {
   hotelName = "Colby Hotel"
   numbersOfRooms = 10
   hiddenRoomsNumbers = false
+  selectedRoom!:RoomList;
   rooms: Room = {
     availableRooms: 10,
     bookedRooms: 5,
@@ -23,6 +24,11 @@ export class RoomsComponent implements OnInit {
     this.hiddenRoomsNumbers = !this.hiddenRoomsNumbers
 
   }
+  roomSelected(room: RoomList): void {
+    this.selectedRoom = room
+
+  }
+
   ngOnInit(): void {
     this.roomslist = [
       {
@@ -54,6 +60,5 @@ export class RoomsComponent implements OnInit {
       }
     ]
   }
-
 
 }

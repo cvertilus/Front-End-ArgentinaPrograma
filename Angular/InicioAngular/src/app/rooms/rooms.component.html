@@ -15,13 +15,16 @@
     Derectives
     *ngfor , *ngIf  , ngclass
 -->
+<div *ngIf="selectedRoom">
+    {{selectedRoom | json}}
+</div>
 <!--
     pipes
     podemos usar pipes para tranformar los datos
     no cambia el objeto actual 
 -->
 <div *ngIf="rooms.availableRooms > 0">
-    <app-rooms-list [rooms]="roomslist"></app-rooms-list>
+    <app-rooms-list [rooms]="roomslist" (selectedRoom)="roomSelected($event)"></app-rooms-list>
 </div>
 <!--
     cuando hacen click en el button llamara a la funciono toogle que hemos declarado en el archivo ts seria event bidind
