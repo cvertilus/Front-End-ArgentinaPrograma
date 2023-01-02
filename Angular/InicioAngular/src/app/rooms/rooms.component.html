@@ -15,6 +15,11 @@
     Derectives
     *ngfor , *ngIf  , ngclass
 -->
+<div>
+    <button (click)="addRoom()">
+        Add Room
+    </button>
+</div>
 <div *ngIf="selectedRoom">
     {{selectedRoom | json}}
 </div>
