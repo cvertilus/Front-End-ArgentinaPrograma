@@ -1,0 +1,7 @@
+#home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.246),rgba(0, 0, 0, 0.545)) ,url(http://www.solofondos.com/wp-content/uploads/2017/07/united-states-chicago-sunset-1920x1080.jpg) ;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
