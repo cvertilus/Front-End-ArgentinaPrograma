@@ -17,33 +17,6 @@
      -moz-filter:invert(-1);
 }
 
-.nav-item{
-    display: inline-block;
-    margin-right: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.45ms;
-    margin-bottom: 5px;
-}
-
-.nav-item .nav-link:hover{
-   color:var(--blue) !important;
-}
-
-
-.nav-item >.nav-link.active {
-    color:var(--blue) !important;
-
-}
-
-.list-group > .list-group-item{
-    background:transparent;
-}
-
-.fa-brands:hover ,.fa-solid:hover{
-    color: var(--bluePrimary) !important;
-}
-
 
 .navbar-toggler{
     border-color: white;

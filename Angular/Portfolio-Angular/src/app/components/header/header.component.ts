@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  logo: string = "assets/img/logoArgentinaProgrma.png";
 
 }

@@ -1,0 +1,7 @@
+.list-group > .list-group-item{
+    background:transparent;
+}
+
+.fa-brands:hover ,.fa-solid:hover{
+    color: var(--bluePrimary) !important;
+}
