@@ -39,3 +39,11 @@
 body{
     background-color: #adebf8 !important;
 }
+
+@media(min-width: 992px){
+    .navbar{
+        min-height: 100vh;
+        width: 240px;
+    }
+
+}
