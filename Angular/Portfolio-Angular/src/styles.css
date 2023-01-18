@@ -1,23 +1,23 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-:root{
-    --blue:#0dcaf0;
-    --bluePrimary:#0d6efd;
-    
+:root {
+    --blue: #0dcaf0;
+    --bluePrimary: #0d6efd;
+
 }
 
-.line{
+.line {
     width: 25%;
     height: 5px;
     background-color: blue;
     margin: 16px auto 24px auto;
 }
 
-.full-height{
+.full-height {
     min-height: 100vh;
     height: 100;
     display: flex;
@@ -28,14 +28,34 @@
     border-bottom: 5px solid var(--blue);
 }
 
-.shadow-effect{
+.shadow-effect {
     transition: all 0.5s;
 }
 
-.shadow-effect:hover{
+.shadow-effect:hover {
     box-shadow: -8px 8px 0px 0px var(--bluePrimary);
 }
 
-body{
+body {
     background-color: #adebf8 !important;
+}
+
+
+
+@media(min-width: 990px) {
+    .navbar {
+        height: 100%;
+        /* Full-height: remove this if you want "auto" height */
+        width: 300px;
+        /* Set the width of the sidebar */
+        position: fixed;
+        /* Fixed Sidebar (stay in place on scroll) */
+       
+        
+    }
+
+    .content-wrapper {
+        padding-left: 300px;
+    }
+
 }

@@ -10,27 +10,29 @@ import { ExperienciasComponent } from './components/experiencias/experiencias.co
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LoginComponent } from './components/header/login/login.component';
-import { SocialMediaComponent } from './components/header/social-media/social-media.component';
+import { SocialMediaComponent } from "./components/header/social-media/social-media.component";
 import { NavLinkComponent } from './components/header/nav-link/nav-link.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeSectionComponent,
-    AboutMeComponent,
-    ExperienciasComponent,
-    SkillsComponent,
-    ProyectosComponent,
-    LoginComponent,
-    SocialMediaComponent,
-    NavLinkComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HomeSectionComponent,
+        AboutMeComponent,
+        ExperienciasComponent,
+        SkillsComponent,
+        ProyectosComponent,
+        LoginComponent,
+        SocialMediaComponent,
+        NavLinkComponent
+       
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        
+    ]
 })
 export class AppModule { }

@@ -1,10 +1,3 @@
-/* nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-} */
 
 
 .bg-black{
@@ -18,7 +11,37 @@
 }
 
 
-.navbar-toggler{
-    border-color: white;
-    border: 2rem solid white;
+.nav-item{
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.45ms;
+    font-size: 19px;
 }
+
+.nav-item .nav-link:hover{
+   color:var(--blue) !important;
+}
+
+
+.nav-item >.nav-link.active {
+    color:var(--blue) !important;
+
+}
+
+.list-group > .list-group-item{
+    background:transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.fa-brands:hover ,.fa-solid:hover{
+    color: var(--bluePrimary) !important;
+}
+
+
+.navbar-toggler{
+    border-color: black;
+    border: 2rem solid black;
+}
+

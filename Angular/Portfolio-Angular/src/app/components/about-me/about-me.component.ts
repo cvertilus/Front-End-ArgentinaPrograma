@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
+  title:string ="Acerca de mi";
+  aboutMe: string = "Lorem ipsumdolor sit amet consectetur adipisicingelit. Repellat saepe necessitatibus sequi sed exercitationem velit earum. Repudiandae, nihil at,accusantium corporis dicta fugit exercitationem doloremque voluptate sapiente eligendi rerumveritatis"
 
 }
