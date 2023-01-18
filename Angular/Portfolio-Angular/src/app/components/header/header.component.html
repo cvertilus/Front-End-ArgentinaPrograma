@@ -1,52 +1,26 @@
-<nav class="navbar navbar-expand-lg  bg-black ">
-    <div class="container flex-lg-column">
-        <a class="navbar-brand text-center" href="#">
-            
-            <img src="Front-End-ArgentinaPrograma/Angular/Portfolio-Angular/src/assets/img/Luffy.jpg" alt="logo-Argentina-Programa" width="50" height="50"
-                class="d-inline-block align-text-top w-100 letras-nor">
-            <span class="h-3 fw-bowld text-light text-uppercase ">Colby Vertilus</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-black sticky-md-top sticky-sm-top">
+    <div class="container-fluid flex-lg-column">
+        <a class="text-center text-decoration-none navbar-brand" href="#">
+            <img [src]="profile" class="img-fluid mb-3 rounded-2 border-primary d-none d-lg-block " alt="profile"
+                width="500px" height="500px">
+
+            <span class="h-3  text-info  mt-5 fw-bold fs-4 text-uppercase">Colby vertilus</span>
         </a>
         <button class="navbar-toggler  bg-info" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon  "></span>
         </button>
-        <div class="collapse navbar-collapse flex-lg-column" id="navbarSupportedContent">
-            <!--socialMedia-->
-            <ul class="list-group list-group-horizontal ">
-                <li class="list-group-item"><a href="https://github.com/cvertilus" blank="#"><i
-                            class="fa-brands fa-github fa-2x text-white"></i></a></li>
-                <li class="list-group-item"><a href="http://"><i class="fa-brands fa-linkedin fa-2x text-white"></i></a>
-                </li>
-                <li class="list-group-item"><a href="mailto:vertiluscolby@gmail.com"><i
-                            class="fa-solid fa-envelope fa-2x text-white"></i></a></li>
-                <!--Button login-->
-                <!-- Button trigger modal -->
-                <li class="list-group-item"><i class="fa-solid fa-user fa-2x text-white" data-bs-toggle="modal"
-                        data-bs-target="#loginModal"></i></li>
-            </ul>
-            <!--link-->
-            <ul class="navbar-nav flex-lg-column">
-                <li class="nav-item font-monospace">
-                    <a class="nav-link  active text-light" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#acerca-de-mi">Acerca de ..</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#experiencias">Experiencias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#Proyectos">Proyectos</a>
-                </li>
-            </ul>
 
-
-
+        <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
+            <app-social-media ></app-social-media>
+            <app-nav-link ></app-nav-link>
         </div>
+
+        <a class="mt-lg-5">
+            <img [src]="logo" alt="logo-Argentina-Programa" width="50" height="50"
+                class="d-inline-block align-text-top w-100 letras-nor">
+        </a>
 
     </div>
 </nav>
