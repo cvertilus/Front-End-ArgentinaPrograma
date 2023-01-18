@@ -10,6 +10,8 @@ import { ExperienciasComponent } from './components/experiencias/experiencias.co
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LoginComponent } from './components/header/login/login.component';
+import { SocialMediaComponent } from './components/header/social-media/social-media.component';
+import { NavLinkComponent } from './components/header/nav-link/nav-link.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LoginComponent } from './components/header/login/login.component';
     ExperienciasComponent,
     SkillsComponent,
     ProyectosComponent,
-    LoginComponent
+    LoginComponent,
+    SocialMediaComponent,
+    NavLinkComponent
   ],
   imports: [
     BrowserModule,
