@@ -12,6 +12,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LoginComponent } from './components/header/login/login.component';
 import { SocialMediaComponent } from "./components/header/social-media/social-media.component";
 import { NavLinkComponent } from './components/header/nav-link/nav-link.component';
+import { ContentComponent } from "./components/content/content.component";
 
 @NgModule({
     declarations: [
@@ -24,8 +25,8 @@ import { NavLinkComponent } from './components/header/nav-link/nav-link.componen
         ProyectosComponent,
         LoginComponent,
         SocialMediaComponent,
-        NavLinkComponent
-       
+        NavLinkComponent,
+        ContentComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
