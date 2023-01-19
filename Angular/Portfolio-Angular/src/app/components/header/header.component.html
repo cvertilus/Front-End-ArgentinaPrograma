@@ -1,26 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-black sticky-md-top sticky-sm-top">
-    <div class="container-fluid flex-lg-column">
-        <a class="text-center text-decoration-none navbar-brand" href="#">
-            <img [src]="profile" class="img-fluid mb-3 rounded-2 border-primary d-none d-lg-block " alt="profile"
-                width="500px" height="500px">
-
-            <span class="h-3  text-info  mt-5 fw-bold fs-4 text-uppercase">Colby vertilus</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-black sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <span class="text-uppercase text-info fw-bold fs-3">{{nombre}}</span>
         </a>
         <button class="navbar-toggler  bg-info" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon  "></span>
         </button>
-
-        <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
-            <app-social-media ></app-social-media>
-            <app-nav-link ></app-nav-link>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <app-nav-link class="m-auto"></app-nav-link>
+            <app-social-media></app-social-media>
         </div>
-
-        <a class="mt-lg-5">
+        <a class="navbar-brand" href="#">
             <img [src]="logo" alt="logo-Argentina-Programa" width="50" height="50"
                 class="d-inline-block align-text-top w-100 letras-nor">
         </a>
-
     </div>
 </nav>

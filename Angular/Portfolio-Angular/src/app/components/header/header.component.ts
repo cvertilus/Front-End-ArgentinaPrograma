@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   logo: string = "assets/img/logoArgentinaProgrma.png";
   profile :string = "assets/img/Luffy.jpg";
+  nombre: String = "Colby v.";
 
 }
