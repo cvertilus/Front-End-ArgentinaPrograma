@@ -13,6 +13,9 @@ import { LoginComponent } from './components/header/login/login.component';
 import { SocialMediaComponent } from "./components/header/social-media/social-media.component";
 import { NavLinkComponent } from './components/header/nav-link/nav-link.component';
 import * as Aos from 'aos';
+import { DeleteComponent } from './components/delete/delete.component';
+import { EditarComponent } from './components/editar/editar.component';
+import { AgregarComponent } from './components/agregar/agregar.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +29,9 @@ import * as Aos from 'aos';
         LoginComponent,
         SocialMediaComponent,
         NavLinkComponent,
+        DeleteComponent,
+        EditarComponent,
+        AgregarComponent,
         
     ],
     providers: [],

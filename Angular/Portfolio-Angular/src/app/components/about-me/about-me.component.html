@@ -2,11 +2,20 @@
     <div class="container pt-5 m-auto pb-4">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-4">
-                <img src="img/Luffy.jpg" alt="luffy-foto" class="img-fluid rounded-circle" data-aos="fade-right">
+                <img [src]="profile" alt="luffy-foto" class="img-fluid rounded-circle" data-aos="fade-right">
+                <div class="container">
+                    <app-delete (click)="test()"></app-delete>
+                    <app-editar></app-editar>
+                    <app-agregar></app-agregar>
+                </div>
+
+
+
             </div>
             <div class="col-lg-8">
                 <h1 class="text-uppercase text-center fw-bold fst-normal mt-4" data-aos="fade-left"
                     data-aos-delay="300">{{title}}</h1>
+                <app-delete (click)="eliminarTitle()"></app-delete>
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
                 <p class="font-monospace fw-bolder fs-5 mt-3" data-aos="fade-left" data-aos-delay="700">{{aboutMe}}</p>
             </div>
