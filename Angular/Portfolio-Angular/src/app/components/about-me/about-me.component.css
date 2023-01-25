@@ -1,0 +1,32 @@
+.profile{
+    overflow: hidden;
+    position: relative;
+}
+
+.profile img,
+.profile-overlay{
+    transition: all .9s ease-out;
+}
+
+.profile-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: var(--blue); */
+    display: flex;
+    padding-left: 230px;
+    opacity: 0;
+}
+
+.profile:hover 
+.profile-overlay{
+    opacity: 1;
+}
+
+.profile:hover > .proyecto-overlay {
+    padding-bottom: 30px;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+
+}

@@ -1,3 +1,45 @@
-section{
+/**Section Proyectos**/
+
+.proyecto-item{
+    overflow: hidden;
+    position: relative;
+
+}
+
+.proyecto-item img,
+.proyecto-overlay{
+    transition: all .9s ease-out;
+}
+
+.proyecto-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+.proyecto-overlay  h6{
+    transform: translateY(300px);
+    transition: all .9s ease-in;
+}
+
+.proyecto-item:hover 
+.proyecto-overlay{
+    opacity: 1;
+}
+
+.proyecto-item:hover > .proyecto-overlay h6{
+    padding-bottom: 30px;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+
+}
+.proyecto-btn:hover{
+    transform: scale(.9);
+    background: var(--blue)!important;
+
 }
