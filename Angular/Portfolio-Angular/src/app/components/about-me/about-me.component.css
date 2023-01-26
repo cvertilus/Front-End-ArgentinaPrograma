@@ -1,32 +1,62 @@
-.profile{
+.profile,
+.aboutMe {
     overflow: hidden;
     position: relative;
 }
 
 .profile img,
-.profile-overlay{
+.profile-overlay,
+.aboutMe-overlay {
     transition: all .9s ease-out;
 }
 
-.profile-overlay{
+.profile-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 100%; 
     /* background-color: var(--blue); */
     display: flex;
-    padding-left: 230px;
+    margin-top: 58%;
+    margin-left: 60%;
+    /* padding-right: 0 */
+    ;
     opacity: 0;
 }
 
-.profile:hover 
-.profile-overlay{
+.profile:hover .profile-overlay {
     opacity: 1;
 }
 
-.profile:hover > .proyecto-overlay {
-    padding-bottom: 30px;
+.aboutMe:hover .aboutMe-overlay {
+    opacity: 1;
+}
+
+.profile:hover>.proyecto-overlay {
     transform: translateY(0);
     transition-delay: 0.3s;
+}
 
+.aboutMe:hover>p {
+    margin-top: 50px;
+}
+
+.aboutMe:hover>.aboutMe-overlay {
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.aboutMe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    margin-bottom: 50%;
+    margin-left: 90%;
+    opacity: 0;
+}
+
+section {
+    width: 100%;
 }

@@ -10,7 +10,9 @@
      -moz-filter:invert(-1);
 }
 
-
+.navbar{
+    width: 100%;
+}
 .nav-item{
     margin-bottom: 10px;
     text-decoration: none;

@@ -3,18 +3,25 @@
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-4 profile">
                 <img [src]="profile" alt="luffy-foto" class="img-fluid rounded-circle" data-aos="fade-right">
-                <div class="container profile-overlay">
-                    <app-delete (click)="test()"></app-delete>
+                <div class="container profile-overlay ">
                     <app-editar></app-editar>
-                    <app-agregar></app-agregar>
                 </div>
             </div>
             <div class="col-lg-8">
                 <h1 class="text-uppercase text-center fw-bold fst-normal mt-4" data-aos="fade-left"
                     data-aos-delay="300">{{title}}</h1>
-                <app-delete (click)="eliminarTitle()"></app-delete>
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
-                <p class="font-monospace fw-bolder fs-5 mt-3" data-aos="fade-left" data-aos-delay="700">{{aboutMe}}</p>
+                <div class="aboutMe">
+                    <p class="font-monospace fw-bolder fs-5" data-aos="fade-left" data-aos-delay="700">{{aboutMe}}
+                    </p>
+                    <div class="aboutMe-overlay m-auto ">
+                        <app-delete (click)="eliminarAboutMe()" class="pe-2"></app-delete>
+                        <app-editar (click)="editarAboutMe(aboutMe)"></app-editar>
+                    </div>
+                    
+                </div>
+                
+
             </div>
         </div>
     </div>
