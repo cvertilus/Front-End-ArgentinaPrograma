@@ -1,23 +1,26 @@
 <section id="experiencias" class="full-height" routerLink="/experiencias">
     <div class="container mt-5">
         <div class="row">
-            <div class="col-12 text-center pb-5">
-                <h1 class="display-4 fst-normal  fw-bold" data-aos="fade-left" data-aos-delay="300"> Mi Educacion &
-                    Experencias</h1>
+            <div class="col-12 text-center pb-5" data-aos="fade-left" data-aos-delay="300">
+                <h1 class="display-4 fst-normal  fw-bold"> {{title}}</h1>
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
             </div>
         </div>
         <div class="row gy-4">
             <div class="col-lg-6">
-                <h4 class="display-6 fw-bold" data-aos="fade-left" data-aos-delay="300">
-                    Educacion</h4>
+                <div class="container d-inline-flex ">
+                    <h4 class="display-6 fw-bold me-auto" data-aos="fade-left" data-aos-delay="300">
+                        {{educacionTitle}}</h4>
+                    <app-agregar></app-agregar>
+
+                </div>
+
                 <div class="row gy-4">
                     <div class="col-12">
-                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px"
-                            data-aos="fade-up" data-aos-delay="800">
+                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
+                            data-aos-delay="800">
 
-                            <img src="img/logo_uba.gif" class="card-img-top" alt="logo-uba"
-                                style="border-radius:10px">
+                            <img src="img/logo_uba.gif" class="card-img-top" alt="logo-uba" style="border-radius:10px">
 
 
                             <div class="card-body">
@@ -27,17 +30,36 @@
                                 <a href="https://www.uba.ar/contenido/287" class="btn btn-primary">Visitar sitio
                                     web</a>
                             </div>
+                            <div class="overlay">
+                                <div class="text-center mx-auto  content">
+                                    <div class="editar">
+                                        <app-editar></app-editar>
+                                    </div>
+                                    <div class="delete">
+                                        <app-delete></app-delete>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px"
-                            data-aos="fade-up" data-aos-delay="1000">
-                            <img src="img/utn-logo.jpg" class="card-img-top " alt="logo-utn"
-                                style="border-radius:10px">
+                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
+                            data-aos-delay="1000">
+                            <img src="img/utn-logo.jpg" class="card-img-top " alt="logo-utn" style="border-radius:10px">
                             <div class="card-body">
                                 <h1 class="card-title">Universidad Tecnologia Nacional</h1>
                                 <p class="card-text">Cursando<br> <strong>Desarollador en Java</strong> </p>
                                 <a href="https://utn.edu.ar/es/" class="btn btn-primary">Visitar sitio web</a>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-center mx-auto  content">
+                                    <div class="editar">
+                                        <app-editar></app-editar>
+                                    </div>
+                                    <div class="delete">
+                                        <app-delete></app-delete>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -45,16 +67,30 @@
             </div>
 
             <div class="col-lg-6">
-                <h4 class="display-6 fw-bold" data-aos="fade-left" data-aos-delay="300">
-                    Experiencias</h4>
+                <div class="container d-inline-flex " data-aos="fade-left" data-aos-delay="300">
+                    <h4 class="display-6 fw-bold me-auto">
+                        {{experianciasTitle}}</h4>
+                    <app-agregar></app-agregar>
+                </div>
                 <div class="col-12">
-                    <div class="card bg-info border-0 shadow-effect" style="border-radius:10px"
-                        data-aos="fade-up" data-aos-delay="700">
-                        <img src="img/lkd.png" class="card-img-top " alt="logo-uba" style="border-radius:10px; height: 220px;" >
+                    <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
+                        data-aos-delay="700">
+                        <img src="img/lkd.png" class="card-img-top " alt="logo-uba"
+                            style="border-radius:10px; height: 220px;">
                         <div class="card-body">
                             <h1 class="card-title">Soporte Tecnico</h1>
                             <p class="card-text">Oct 2019 - actualidad <br> <strong>Don Bosco</strong> </p>
                             <a href="http://lkdfibra.com/" class="btn btn-primary">Visitar sitio web</a>
+                        </div>
+                        <div class="overlay">
+                            <div class="text-center mx-auto  content">
+                                <div class="editar">
+                                    <app-editar></app-editar>
+                                </div>
+                                <div class="delete">
+                                    <app-delete></app-delete>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

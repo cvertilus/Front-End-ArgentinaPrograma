@@ -11,7 +11,7 @@
     transition: all .9s ease-out;
 }
 
-.proyecto-overlay{
+.proyecto-overlay,.overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@
 }
 .proyecto-overlay  h6{
     transform: translateY(300px);
-    transition: all .9s ease-in;
+    transition: all .5s ease-in;
 }
 
 .proyecto-item:hover 
@@ -43,3 +43,35 @@
     background: var(--blue)!important;
 
 }
+
+
+
+
+.content > .editar{
+    transform: translateY(-300px);
+    transition: all .5s ease-in;
+}
+.content > .delete{
+    transform: translateY(300px);
+    transition: all .5s ease-in;
+}
+
+
+
+.proyecto-item:hover 
+.content > .delete 
+{
+    transform: translateY(0);
+    transition: all .5s ease-in;
+    padding-top: 5px;
+}
+
+.proyecto-item:hover 
+.content > .editar
+{
+    transform: translateY(0);
+    transition: all .5s ease-in;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
