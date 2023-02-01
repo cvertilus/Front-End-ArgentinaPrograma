@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperienciaService {
+  private apiUrl = "http://localhost:5000/Experiencias"
 
   constructor(private http:HttpClient) { }
   obtenerDatos():Observable<any>{

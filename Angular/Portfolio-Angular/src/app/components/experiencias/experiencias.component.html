@@ -16,40 +16,19 @@
                 </div>
 
                 <div class="row gy-4">
-                    <div class="col-12">
+                    <div class="col-12" *ngFor="let educacion of educacionList">
                         <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
                             data-aos-delay="800">
 
-                            <img src="img/logo_uba.gif" class="card-img-top" alt="logo-uba" style="border-radius:10px">
+                            <img [src]="educacion.logo" class="card-img-top" alt="logo-uba" style="border-radius:10px">
 
 
                             <div class="card-body">
-                                <h1 class="card-title">Universidad de Buenos Aires</h1>
-                                <p class="card-text">Cursando la carrera <br> <strong>Analista de sistemas</strong>
+                                <h1 class="card-title">{{educacion.title}}</h1>
+                                <p class="card-text">Cursando la carrera <br> <strong>{{educacion.carrera}}</strong>
                                 </p>
-                                <a href="https://www.uba.ar/contenido/287" class="btn btn-primary">Visitar sitio
+                                <a [href]="educacion.sitioWeb" class="btn btn-primary">Visitar sitio
                                     web</a>
-                            </div>
-                            <div class="overlay">
-                                <div class="text-center mx-auto  content">
-                                    <div class="editar">
-                                        <app-editar></app-editar>
-                                    </div>
-                                    <div class="delete">
-                                        <app-delete></app-delete>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
-                            data-aos-delay="1000">
-                            <img src="img/utn-logo.jpg" class="card-img-top " alt="logo-utn" style="border-radius:10px">
-                            <div class="card-body">
-                                <h1 class="card-title">Universidad Tecnologia Nacional</h1>
-                                <p class="card-text">Cursando<br> <strong>Desarollador en Java</strong> </p>
-                                <a href="https://utn.edu.ar/es/" class="btn btn-primary">Visitar sitio web</a>
                             </div>
                             <div class="overlay">
                                 <div class="text-center mx-auto  content">
@@ -72,23 +51,27 @@
                         {{experianciasTitle}}</h4>
                     <app-agregar></app-agregar>
                 </div>
-                <div class="col-12">
-                    <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
-                        data-aos-delay="700">
-                        <img src="img/lkd.png" class="card-img-top " alt="logo-uba"
-                            style="border-radius:10px; height: 220px;">
-                        <div class="card-body">
-                            <h1 class="card-title">Soporte Tecnico</h1>
-                            <p class="card-text">Oct 2019 - actualidad <br> <strong>Don Bosco</strong> </p>
-                            <a href="http://lkdfibra.com/" class="btn btn-primary">Visitar sitio web</a>
-                        </div>
-                        <div class="overlay">
-                            <div class="text-center mx-auto  content">
-                                <div class="editar">
-                                    <app-editar></app-editar>
-                                </div>
-                                <div class="delete">
-                                    <app-delete></app-delete>
+                <div class="row gy-4">
+                    <div class="col-12" *ngFor="let experiencia of experienciasList">
+                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
+                            data-aos-delay="700">
+                            <img [src]="experiencia.empresaLogo" class="card-img-top " alt="logo-uba"
+                                style="border-radius:10px; height: 220px;">
+                            <div class="card-body">
+                                <h1 class="card-title">{{experiencia.puesto}}</h1>
+                                <p class="card-text">{{experiencia.duracion}}<br>
+                                    <strong>{{experiencia.adress}}</strong>
+                                </p>
+                                <a [href]="experiencia.sitioWeb" class="btn btn-primary">Visitar sitio web</a>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-center mx-auto  content">
+                                    <div class="editar">
+                                        <app-editar></app-editar>
+                                    </div>
+                                    <div class="delete">
+                                        <app-delete></app-delete>
+                                    </div>
                                 </div>
                             </div>
                         </div>

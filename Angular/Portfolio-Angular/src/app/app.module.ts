@@ -16,6 +16,8 @@ import * as Aos from 'aos';
 import { DeleteComponent } from './components/delete/delete.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
+import { AboutServiceService } from './service/about/about-service.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -34,11 +36,14 @@ import { AgregarComponent } from './components/agregar/agregar.component';
         AgregarComponent,
         
     ],
-    providers: [],
+    providers: [
+        AboutServiceService
+    ],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
+        HttpClientModule,
         
     ]
 })

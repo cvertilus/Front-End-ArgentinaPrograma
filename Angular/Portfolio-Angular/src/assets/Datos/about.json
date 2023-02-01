@@ -1,0 +1,47 @@
+{
+    "AboutMe": {
+        "img": "/assets/img/Luffy.jpg",
+        "title": "Acerca de Mi",
+        "aboutme": "Lorem ipsumdolor sit amet consectetur adipisicingelit. Repellat saepe necessitatibus sequi sed exercitationem velit earum. Repudiandae, nihil at,accusantium corporis dicta fugit exercitationem doloremque voluptate sapiente eligendi rerumveritatis"
+    },
+    "Experiencias" :[
+        {
+            "empresaLogo": "/assets/img/lkd.png",
+            "puesto" : "Soporte Tecnico",
+            "duracion": "Oct 2019 - actualidad",
+            "adress" : "Don Bosco",
+            "sitioWeb" : "http://lkdfibra.com/"
+        },
+        {
+            "empresaLogo": "/assets/img/lkd.png",
+            "puesto" : "Soporte Tecnico",
+            "duracion": "Oct 2019 - actualidad",
+            "adress" : "Don Bosco",
+            "sitioWeb" : "http://lkdfibra.com/"
+        }
+
+    ],
+    "Educacion" : [
+        {
+            "title" : "Universiadad De Buenos Aires",
+            "logo": "/assets/img/logo_uba.gif",
+            "carrera": "Analista de Sitema",
+            "SitioWeb": "https://www.uba.ar/contenido/287"
+
+        },
+        {
+            "title" : "Universiadad De Buenos Aires",
+            "logo": "/assets/img/logo_uba.gif",
+            "carrera": "Analista de Sitema",
+            "sitioWeb": "https://www.uba.ar/contenido/287"
+
+        },
+        {
+            "title" : "Universidad Tecnologia Nacional",
+            "logo": "/assets/img/utn-logo.jpg",
+            "carrera": "Desarollador en Java",
+            "sitioWeb": "https://utn.edu.ar/es/"
+
+        }
+    ]
+}
