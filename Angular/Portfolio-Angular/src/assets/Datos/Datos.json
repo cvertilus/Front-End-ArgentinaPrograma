@@ -1,0 +1,97 @@
+{
+    "AboutMe": {
+        "img": "/assets/img/Luffy.jpg",
+        "title": "Acerca de Mi",
+        "aboutme": "Lorem ipsumdolor sit amet consectetur adipisicingelit. Repellat saepe necessitatibus sequi sed exercitationem velit earum. Repudiandae, nihil at,accusantium corporis dicta fugit exercitationem doloremque voluptate sapiente eligendi rerumveritatis"
+    },
+    "Experiencias": [
+        {
+            "empresaLogo": "/assets/img/lkd.png",
+            "puesto": "Soporte Tecnico",
+            "duracion": "Oct 2019 - actualidad",
+            "adress": "Don Bosco",
+            "sitioWeb": "http://lkdfibra.com/"
+        },
+        {
+            "empresaLogo": "/assets/img/lkd.png",
+            "puesto": "Soporte Tecnico",
+            "duracion": "Oct 2019 - actualidad",
+            "adress": "Don Bosco",
+            "sitioWeb": "http://lkdfibra.com/"
+        }
+    ],
+    "Educacion": [
+        {
+            "establecimiento": "Universiadad De Buenos Aires",
+            "logo": "/assets/img/logo_uba.gif",
+            "carrera": "Analista de Sitema",
+            "SitioWeb": "https://www.uba.ar/contenido/287"
+        },
+        {
+            "establecimiento": "Universiadad De Buenos Aires",
+            "logo": "/assets/img/logo_uba.gif",
+            "carrera": "Analista de Sitema",
+            "sitioWeb": "https://www.uba.ar/contenido/287"
+        },
+        {
+            "establecimiento": "Universidad Tecnologia Nacional",
+            "logo": "/assets/img/utn-logo.jpg",
+            "carrera": "Desarollador en Java",
+            "sitioWeb": "https://utn.edu.ar/es/"
+        }
+    ],
+    "Skills": [
+        {
+            "lenguajeSkill":"html",
+            "porcentaje":70
+        },
+        {
+            "lenguajeSkill":"css",
+            "porcentaje":60
+        },
+        {
+            "lenguajeSkill":"javaScript",
+            "porcentaje":55
+        },
+        {
+            "lenguajeSkill":"Angular",
+            "porcentaje":70
+        },
+        {
+            "lenguajeSkill":"typeScript",
+            "porcentaje":65
+        },
+        {
+            "lenguajeSkill":"C",
+            "porcentaje":70
+        },
+        {
+            "lenguajeSkill":"java",
+            "porcentaje":75
+        },
+        {
+            "lenguajeSkill":"Python",
+            "porcentaje":80
+        }
+    ],
+    "Proyectos": [
+        {
+            "imgProject": "/assets/img/tetris.png",
+            "titleProject": "Tetris",
+            "lenProject": "Python",
+            "githubProject":""
+        },
+        {
+            "imgProject": "/assets/img/tetris.png",
+            "titleProject": "Tetris",
+            "lenProject": "Python",
+            "githubProject":""
+        },
+        {
+            "imgProject": "/assets/img/tetris.png",
+            "titleProject": "Tetris",
+            "lenProject": "Python",
+            "githubProject":""
+        }
+    ]
+}

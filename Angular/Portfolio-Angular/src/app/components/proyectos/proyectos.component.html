@@ -11,16 +11,16 @@
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
             </div>
         </div>
-        <div class="row gy-3">
-            <div class="col-lg-4 " data-aos="fade-up">
+        <div class="row gy-3" >
+            <div class="col-lg-4 " data-aos="fade-up" *ngFor="let proyecto of proyectoList">
                 <div class="proyecto-item">
-                    <img src="/assets/img/tetris.png" alt="tetris-foto" class="img-fluid">
+                    <img [src]= 'proyecto.imgProject'  alt="tetris-foto" class="img-fluid">
                     <div class="proyecto-overlay">
                         <div class="mx-auto text-center">
-                            <h2 class="display-4 fw-bold fs-3">TETRIS</h2>
-                            <h6 class="text-primary fw-bold fs-5 ">Python</h6>
+                            <h2 class="display-4 fw-bold fs-3">{{proyecto.titleProject}}</h2>
+                            <h6 class="text-primary fw-bold fs-5 ">{{proyecto.lenProject}}</h6>
                             <div>
-                                <a href="https://github.com/cvertilus/Tetris.git" class="text-white"><i
+                                <a [href]="proyecto.githubProject" class="text-white"><i
                                         class="fa-brands  fa-github">Ver en github</i></a>
                             </div>
 
@@ -38,37 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 " data-aos="fade-up" data-aos-delay="300">
-                <div class="proyecto-item">
-                    <img src="img/tetris.png" alt="tetris-foto" class="img-fluid">
-                    <div class="proyecto-overlay">
-                        <div class="mx-auto text-center">
-                            <h2 class="display-4 fw-bold fs-3">TETRIS</h2>
-                            <h6 class="text-primary fw-bold fs-5 ">Python</h6>
-                            <div>
-                                <a href="https://github.com/cvertilus/Tetris.git" class="text-white"><i
-                                        class="fa-brands  fa-github">Ver en github</i></a>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 " data-aos="fade-up" data-aos-delay="500">
-                <div class="proyecto-item">
-                    <img src="img/tetris.png" alt="tetris-foto" class="img-fluid">
-                    <div class="proyecto-overlay">
-                        <div class="mx-auto text-center">
-                            <h2 class="display-4 fw-bold fs-3">TETRIS</h2>
-                            <h6 class="text-primary fw-bold fs-5 ">Python</h6>
-                            <div>
-                                <a href="https://github.com/cvertilus/Tetris.git" class="text-white"><i
-                                        class="fa-brands  fa-github">Ver en github</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row mx-auto">
             <div class="col-12 text-center pt-5 rounded-4" data-aos="fade-up" data-aos-delay="600">
