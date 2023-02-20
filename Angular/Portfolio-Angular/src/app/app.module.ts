@@ -18,6 +18,7 @@ import { EditarComponent } from './components/editar/editar.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
 import { AboutServiceService } from './service/about/about-service.service';
 import {HttpClientModule} from '@angular/common/http';
+import { EditarAboutMeComponent } from './components/about-me/editar-about-me/editar-about-me.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
         DeleteComponent,
         EditarComponent,
         AgregarComponent,
+        EditarAboutMeComponent,
+        
         
     ],
     providers: [

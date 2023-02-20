@@ -10,6 +10,7 @@ import { Aboutme } from './about';
 export class AboutMeComponent implements OnInit{
   aboutMeDatos!: Aboutme;
 
+
   constructor (private aboutService:AboutServiceService){
   }
   
@@ -22,7 +23,14 @@ export class AboutMeComponent implements OnInit{
   editarAboutMe(text: string) {
     throw new Error('Method not implemented.');
   }
+
   eliminarAboutMe() {
+    this.aboutMeDatos.aboutme = ".............";
+    this.aboutService.updateAboutMe(this.aboutMeDatos).subscribe(datos => {
+      this.aboutMeDatos = datos;
+    })
+
+
   
   }
 

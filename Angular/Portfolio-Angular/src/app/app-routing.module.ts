@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { EditarAboutMeComponent } from './components/about-me/editar-about-me/editar-about-me.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { LoginComponent } from './components/header/login/login.component';
 import { HomeSectionComponent } from './components/home-section/home-section.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'Proyectos',component:ProyectosComponent},
   {path:'home',component:HomeSectionComponent},
   {path:'',component:HomeSectionComponent},
+  {path:'editarAboutme',component:EditarAboutMeComponent},
 
 ];
 

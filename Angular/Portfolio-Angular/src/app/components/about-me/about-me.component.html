@@ -12,14 +12,21 @@
                     data-aos-delay="300">{{aboutMeDatos.title}}</h1>
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
                 <div class="aboutMe">
-                    <p class="font-monospace fw-bolder fs-5" data-aos="fade-left" data-aos-delay="700">{{aboutMeDatos.aboutme}}
+                    <p class="font-monospace fw-bolder fs-5" data-aos="fade-left" data-aos-delay="700">
+                        {{aboutMeDatos.aboutme}}
                     </p>
                     <div class="aboutMe-overlay m-auto ">
                         <app-delete (click)="eliminarAboutMe()" class="pe-2"></app-delete>
-                        <app-editar ></app-editar>
+                        <app-editar data-bs-toggle="modal" href="editarAboutme" data-bs-target="#editarAboutme">
+                        </app-editar>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<app-editar-about-me [title]="'Acerca de mi'"></app-editar-about-me>
+<router-outlet></router-outlet>
+
+
