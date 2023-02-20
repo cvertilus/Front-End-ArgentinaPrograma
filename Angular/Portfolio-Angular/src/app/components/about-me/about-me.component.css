@@ -14,13 +14,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 100%; 
-    /* background-color: var(--blue); */
     display: flex;
-    margin-top: 58%;
-    margin-left: 60%;
-    /* padding-right: 0 */
-    ;
+    justify-content: center;
     opacity: 0;
 }
 
@@ -34,7 +29,7 @@
 
 .profile:hover>.proyecto-overlay {
     transform: translateY(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.9s;
 }
 
 .aboutMe:hover>p {

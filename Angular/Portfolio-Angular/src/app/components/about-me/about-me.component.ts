@@ -8,6 +8,7 @@ import { Aboutme } from './about';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit{
+
   aboutMeDatos!: Aboutme;
 
 
@@ -20,19 +21,29 @@ export class AboutMeComponent implements OnInit{
     })
   }
 
-  editarAboutMe(text: string) {
-    throw new Error('Method not implemented.');
-  }
-
-  eliminarAboutMe() {
-    this.aboutMeDatos.aboutme = ".............";
+  updateServer(){
     this.aboutService.updateAboutMe(this.aboutMeDatos).subscribe(datos => {
       this.aboutMeDatos = datos;
     })
 
+  }
 
+  editarAboutMe(text: string) {
+    this.aboutMeDatos.aboutme = text;
+    this.updateServer()
+  }
+
+  eliminarAboutMe() {
+    this.aboutMeDatos.aboutme = ".............";
+    this.updateServer()
   
   }
+
+  editarFoto(link: string) {
+    this.aboutMeDatos.img = link
+    this.updateServer()
+
+    }
 
   test() {
     alert("funciono");

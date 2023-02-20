@@ -1,20 +1,25 @@
- <!--EditarModal-->
- <div class="modal fade" id="editarAboutme" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--EditarModal-->
+<div class="modal fade" id="{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-success">
                 <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
-                <button type="button" class=" btn btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class=" btn btn-close btn-danger" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body bg-primary">
-                <form class="form-control mb-0 pt-3">
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Comments</label>
-                      </div>
+                <form class="form-control mb-0 pt-3" [formGroup]="editarFormulario" (ngSubmit)="onEnviar(editarFormulario.value)">
+                    <div class="form-floating h-25">
+                        <textarea 
+                        class="form-control" placeholder="Leave a comment here"
+                        id="floatingTextarea" formControlName ="entrada"
+                        ></textarea>
+                    </div>
+                    <div class="pt-2">
+                        <button class="btn btn-success w-100" [disabled]="editarFormulario.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close">Enviar</button>
+                    </div>
                 </form>
             </div>
-
         </div>
     </div>
 </div>

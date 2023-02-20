@@ -19,6 +19,8 @@ import { AgregarComponent } from './components/agregar/agregar.component';
 import { AboutServiceService } from './service/about/about-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { EditarAboutMeComponent } from './components/about-me/editar-about-me/editar-about-me.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -36,6 +38,7 @@ import { EditarAboutMeComponent } from './components/about-me/editar-about-me/ed
         EditarComponent,
         AgregarComponent,
         EditarAboutMeComponent,
+     
         
         
     ],
@@ -47,6 +50,7 @@ import { EditarAboutMeComponent } from './components/about-me/editar-about-me/ed
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        ReactiveFormsModule,
         
     ]
 })

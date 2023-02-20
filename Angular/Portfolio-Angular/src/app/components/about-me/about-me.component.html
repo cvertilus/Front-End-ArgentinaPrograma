@@ -2,9 +2,9 @@
     <div class="container pt-5 m-auto pb-4">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-4 profile">
-                <img [src]="aboutMeDatos.img" alt="luffy-foto" class="img-fluid rounded-circle" data-aos="fade-right">
+                <img [src]="aboutMeDatos.img" alt="luffy-foto" class="img-fluid rounded-1" data-aos="fade-right">
                 <div class="container profile-overlay ">
-                    <app-editar></app-editar>
+                    <app-editar data-bs-toggle="modal" href="editarFoto" data-bs-target="#editarFoto"></app-editar>
                 </div>
             </div>
             <div class="col-lg-8">
@@ -26,7 +26,10 @@
         </div>
     </div>
 </section>
-<app-editar-about-me [title]="'Acerca de mi'"></app-editar-about-me>
+
+<app-editar-about-me [title]="'Acerca de mi'" [id]= "'editarAboutme'" (enviar)="editarAboutMe($event)"></app-editar-about-me>
+<app-editar-about-me [title]="'Editar foto '" [id]= "'editarFoto'" (enviar)="editarFoto($event)"></app-editar-about-me>
+
 <router-outlet></router-outlet>
 
 
