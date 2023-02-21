@@ -20,14 +20,14 @@
                         <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
                             data-aos-delay="800">
 
-                            <img [src]="educacion.logo" class="card-img-top" alt="logo-uba" style="border-radius:10px">
+                            <img [src]="educacion.logo" class="card-img-top" alt="logo-uba" style="border-radius:10px;height:30%">
 
 
                             <div class="card-body">
                                 <h1 class="card-title">{{educacion.establecimiento}}</h1>
                                 <p class="card-text">Cursando la carrera <br> <strong>{{educacion.carrera}}</strong>
                                 </p>
-                                <a [href]="educacion.SitioWeb" class="btn btn-primary">Visitar sitio
+                                <a [href]="educacion.sitioWeb" class="btn btn-primary sitioweb">Visitar sitio
                                     web</a>
                             </div>
                             <div class="overlay">
@@ -39,7 +39,7 @@
 
                                     </div>
                                     <div class="delete">
-                                        <app-delete></app-delete>
+                                        <app-delete (click)="onDelete(educacion)"></app-delete>
                                     </div>
                                 </div>
                             </div>

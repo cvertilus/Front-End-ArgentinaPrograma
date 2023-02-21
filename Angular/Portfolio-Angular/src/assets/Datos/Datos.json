@@ -27,29 +27,22 @@
       "establecimiento": "Universiadad De Buenos Aires",
       "logo": "/assets/img/logo_uba.gif",
       "carrera": "Analista de Sitema",
-      "SitioWeb": "https://www.uba.ar/contenido/287",
+      "sitioWeb": "https://www.uba.ar/contenido/287",
       "id": 1
     },
     {
       "establecimiento": "Universiadad De Buenos Aires",
       "logo": "/assets/img/logo_uba.gif",
       "carrera": "Analista de Sitema",
-      "SitioWeb": "https://www.uba.ar/contenido/287",
+      "sitioWeb": "https://www.uba.ar/contenido/287",
       "id": 2
     },
     {
       "establecimiento": "Universidad Tecnologia Nacional",
       "logo": "/assets/img/utn-logo.jpg",
       "carrera": "Desarollador en Java",
-      "SitioWeb": "https://utn.edu.ar/es/",
+      "sitioWeb": "https://utn.edu.ar/es/",
       "id": 3
-    },
-    {
-      "establecimiento": "jacmel universidada",
-      "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.cokEs94BUzJgjIjtpyYVtQHaD8%26pid%3DApi&f=1&ipt=095447ed4b8e96646dd9b8601404b8931e55c16eefe90e93eabb81601f7549d1&ipo=images",
-      "carrera": "imformartica",
-      "Sitioweb": "jacmel.com",
-      "id": 4
     }
   ],
   "Skills": [

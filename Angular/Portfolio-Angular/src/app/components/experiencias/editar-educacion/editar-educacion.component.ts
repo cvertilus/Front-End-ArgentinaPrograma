@@ -29,11 +29,12 @@ export class EditarEducacionComponent {
       establecimiento: ['', Validators.required],
       logo: ['', Validators.required],
       carrera: ['', Validators.required],
-      Sitioweb: ['', Validators.required]
+      sitioweb: ['', Validators.required]
     })
   }
 
   onGuardar(datos: Educacion) {
+    if(this.guardar) datos.id = this.item.id
     this.editar.emit(datos);
   }
 

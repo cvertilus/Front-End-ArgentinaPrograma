@@ -11,9 +11,6 @@ import { Experiencia } from './experiencias';
 })
 export class ExperienciasComponent implements OnInit {
 
-
-
-
   experienciasList!: Experiencia[];
   educacionList!: Educacion[];
   constructor(private experiencias: ExperienciaService, private _educacionService: EducacionService) { }
@@ -39,10 +36,10 @@ export class ExperienciasComponent implements OnInit {
     this.modificarEduacion = dato
   }
 
-  private agregarEducacionLista(educacion:Educacion){
+  private agregarEducacionLista(educacion: Educacion) {
     educacion.id = this.educacionList.length + 1
-    this.educacionList = [... this.educacionList,educacion]
-    console.log(this.educacionList)
+    this.educacionList = [... this.educacionList, educacion]
+  
 
   }
 
@@ -53,9 +50,29 @@ export class ExperienciasComponent implements OnInit {
     })
   }
 
+  public actualizarEducacion(actual: Educacion) {
+    for (let datos of this.educacionList) {
+      if (datos.id != actual.id) continue;
+      datos.sitioWeb = actual.sitioWeb
+      datos.carrera = actual.carrera
+      datos.establecimiento = actual.establecimiento
+      datos.logo = actual.logo
+    }
+  }
+
 
   public editarEduacion(actual: Educacion) {
-    throw new Error('Method not implemented.');
+    this.actualizarEducacion(actual)
+    this._educacionService.updateEduacion(actual).subscribe()
+
+  }
+
+
+  
+  public onDelete(educacion: Educacion) {
+    this.educacionList = this.educacionList.filter(item => item.id !== educacion.id)
+    this._educacionService.deleteEducacion(educacion).subscribe()
+    
   }
 
 
