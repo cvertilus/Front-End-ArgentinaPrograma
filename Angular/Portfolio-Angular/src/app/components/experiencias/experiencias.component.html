@@ -11,7 +11,7 @@
                 <div class="container d-inline-flex ">
                     <h4 class="display-6 fw-bold me-auto" data-aos="fade-left" data-aos-delay="300">
                         {{educacionTitle}}</h4>
-                    <app-agregar></app-agregar>
+                    <app-agregar data-bs-toggle="modal" data-bs-target="#agregarEducacion"></app-agregar>
 
                 </div>
 
@@ -33,7 +33,10 @@
                             <div class="overlay">
                                 <div class="text-center mx-auto  content">
                                     <div class="editar">
-                                        <app-editar></app-editar>
+
+                                        <app-editar data-bs-toggle="modal" data-bs-target="#editarEduacion" (click)="obtenerDatos(educacion)">
+                                        </app-editar>
+
                                     </div>
                                     <div class="delete">
                                         <app-delete></app-delete>
@@ -68,6 +71,7 @@
                                 <div class="text-center mx-auto  content">
                                     <div class="editar">
                                         <app-editar></app-editar>
+
                                     </div>
                                     <div class="delete">
                                         <app-delete></app-delete>
@@ -82,3 +86,5 @@
 
     </div>
 </section>
+<app-editar-educacion [item]="modificarEduacion" [title]="'Editar Eduacion'" [id]="'editarEduacion'" [guardar]="true" (editar)="editarEduacion($event)" ></app-editar-educacion>
+<app-editar-educacion [title]="'Agregar Eduacion'" [id]="'agregarEducacion'" [guardar]="false" (editar)="agregarEducacion($event)"></app-editar-educacion>

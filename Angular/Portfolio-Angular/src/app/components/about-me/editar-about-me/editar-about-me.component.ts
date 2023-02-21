@@ -12,7 +12,7 @@ export class EditarAboutMeComponent {
   @Input() title!: string;
   @Input() id!:string;
   @Output() enviar = new EventEmitter<string>();
-
+ 
   editarFormulario !: FormGroup;
 
   constructor(

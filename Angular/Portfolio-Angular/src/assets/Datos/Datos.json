@@ -2,7 +2,7 @@
   "AboutMe": {
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5T-BJE5rmNeO97BlPzV1ERXufN41wqhky-w&usqp=CAU",
     "title": "Acerca de Mi",
-    "aboutme": "sos todo un crack "
+    "aboutme": "soy de lo mejor que hay en este moundo asi que no te preocupes\n"
   },
   "Experiencias": [
     {
@@ -10,14 +10,16 @@
       "puesto": "Soporte Tecnico",
       "duracion": "Oct 2019 - actualidad",
       "adress": "Don Bosco",
-      "sitioWeb": "http://lkdfibra.com/"
+      "sitioWeb": "http://lkdfibra.com/",
+      "id": 1
     },
     {
       "empresaLogo": "/assets/img/lkd.png",
       "puesto": "Soporte Tecnico",
       "duracion": "Oct 2019 - actualidad",
       "adress": "Don Bosco",
-      "sitioWeb": "http://lkdfibra.com/"
+      "sitioWeb": "http://lkdfibra.com/",
+      "id": 2
     }
   ],
   "Educacion": [
@@ -25,19 +27,29 @@
       "establecimiento": "Universiadad De Buenos Aires",
       "logo": "/assets/img/logo_uba.gif",
       "carrera": "Analista de Sitema",
-      "SitioWeb": "https://www.uba.ar/contenido/287"
+      "SitioWeb": "https://www.uba.ar/contenido/287",
+      "id": 1
     },
     {
       "establecimiento": "Universiadad De Buenos Aires",
       "logo": "/assets/img/logo_uba.gif",
       "carrera": "Analista de Sitema",
-      "sitioWeb": "https://www.uba.ar/contenido/287"
+      "SitioWeb": "https://www.uba.ar/contenido/287",
+      "id": 2
     },
     {
       "establecimiento": "Universidad Tecnologia Nacional",
       "logo": "/assets/img/utn-logo.jpg",
       "carrera": "Desarollador en Java",
-      "sitioWeb": "https://utn.edu.ar/es/"
+      "SitioWeb": "https://utn.edu.ar/es/",
+      "id": 3
+    },
+    {
+      "establecimiento": "jacmel universidada",
+      "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.cokEs94BUzJgjIjtpyYVtQHaD8%26pid%3DApi&f=1&ipt=095447ed4b8e96646dd9b8601404b8931e55c16eefe90e93eabb81601f7549d1&ipo=images",
+      "carrera": "imformartica",
+      "Sitioweb": "jacmel.com",
+      "id": 4
     }
   ],
   "Skills": [

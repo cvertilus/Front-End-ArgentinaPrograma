@@ -4,4 +4,5 @@ export interface Experiencia {
     "duracion": string,
     "adress": string,
     "sitioWeb": string
+    "id":number;
 }

@@ -20,6 +20,8 @@ import { AboutServiceService } from './service/about/about-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { EditarAboutMeComponent } from './components/about-me/editar-about-me/editar-about-me.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarExperienciasComponent } from './components/experiencias/editar-experiencias/editar-experiencias.component';
+import { EditarEducacionComponent } from './components/experiencias/editar-educacion/editar-educacion.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         EditarComponent,
         AgregarComponent,
         EditarAboutMeComponent,
+        EditarExperienciasComponent,
+        EditarEducacionComponent,
      
         
         
