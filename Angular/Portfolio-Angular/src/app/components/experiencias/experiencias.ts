@@ -1,7 +1,8 @@
 export interface Experiencia {
-    "empresaLogo": string,
+    "empresa": string,
     "puesto": string,
-    "duracion": string,
+    "desde": string,
+    "hasta": string,
     "adress": string,
     "sitioWeb": string
     "id":number;

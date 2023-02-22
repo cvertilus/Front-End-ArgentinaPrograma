@@ -6,17 +6,19 @@
   },
   "Experiencias": [
     {
-      "empresaLogo": "/assets/img/lkd.png",
-      "puesto": "Soporte Tecnico",
-      "duracion": "Oct 2019 - actualidad",
-      "adress": "Don Bosco",
-      "sitioWeb": "http://lkdfibra.com/",
+      "empresa": "Linkeados Fibra ",
+      "puesto": "Soporte Tecnico ",
+      "desde": "2023-02-02",
+      "hasta": "2023-02-21",
+      "adress": " Don Bosco",
+      "sitioWeb": "http://lkdfibra.com/ ",
       "id": 1
     },
     {
-      "empresaLogo": "/assets/img/lkd.png",
+      "empresa": "Linkeados Fibra",
       "puesto": "Soporte Tecnico",
-      "duracion": "Oct 2019 - actualidad",
+      "desde": "Oct 2019",
+      "hasta": "actualidad",
       "adress": "Don Bosco",
       "sitioWeb": "http://lkdfibra.com/",
       "id": 2

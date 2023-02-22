@@ -20,21 +20,22 @@
                         <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
                             data-aos-delay="800">
 
-                            <img [src]="educacion.logo" class="card-img-top" alt="logo-uba" style="border-radius:10px;height:30%">
+                            <img [src]="educacion.logo" class="card-img-top" alt="logo-uba"
+                                style="border-radius:10px;height:30%">
 
 
                             <div class="card-body">
                                 <h1 class="card-title">{{educacion.establecimiento}}</h1>
                                 <p class="card-text">Cursando la carrera <br> <strong>{{educacion.carrera}}</strong>
                                 </p>
-                                <a [href]="educacion.sitioWeb" class="btn btn-primary sitioweb">Visitar sitio
-                                    web</a>
+                                
                             </div>
                             <div class="overlay">
                                 <div class="text-center mx-auto  content">
                                     <div class="editar">
 
-                                        <app-editar data-bs-toggle="modal" data-bs-target="#editarEduacion" (click)="obtenerDatos(educacion)">
+                                        <app-editar data-bs-toggle="modal" data-bs-target="#editarEduacion"
+                                            (click)="obtenerDatosEducacion(educacion)">
                                         </app-editar>
 
                                     </div>
@@ -42,6 +43,8 @@
                                         <app-delete (click)="onDelete(educacion)"></app-delete>
                                     </div>
                                 </div>
+                                <a [href]="educacion.sitioWeb" class="btn btn-primary sitioweb">Visitar sitio
+                                    web</a>
                             </div>
                         </div>
                     </div>
@@ -52,31 +55,35 @@
                 <div class="container d-inline-flex " data-aos="fade-left" data-aos-delay="300">
                     <h4 class="display-6 fw-bold me-auto">
                         {{experianciasTitle}}</h4>
-                    <app-agregar></app-agregar>
+                    <app-agregar data-bs-toggle="modal" data-bs-target="#agregarExperiencias"></app-agregar>
                 </div>
                 <div class="row gy-4">
                     <div class="col-12" *ngFor="let experiencia of experienciasList">
                         <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
                             data-aos-delay="700">
-                            <img [src]="experiencia.empresaLogo" class="card-img-top " alt="logo-uba"
-                                style="border-radius:10px; height: 220px;">
+                            <h2>{{experiencia.empresa}}</h2>
                             <div class="card-body">
                                 <h1 class="card-title">{{experiencia.puesto}}</h1>
-                                <p class="card-text">{{experiencia.duracion}}<br>
+                                <p class="card-text">
+                                    {{experiencia.desde}}<br>
+                                    {{experiencia.hasta}} <br>
                                     <strong>{{experiencia.adress}}</strong>
                                 </p>
-                                <a [href]="experiencia.sitioWeb" class="btn btn-primary">Visitar sitio web</a>
+
+                                
                             </div>
                             <div class="overlay">
                                 <div class="text-center mx-auto  content">
                                     <div class="editar">
-                                        <app-editar></app-editar>
-
+                                        <app-editar data-bs-toggle="modal" data-bs-target="#editarExperiencias"
+                                            (click)="obtenerDatosExperiencias(experiencia)"></app-editar>
                                     </div>
                                     <div class="delete">
-                                        <app-delete></app-delete>
+                                        <app-delete (click)="eliminarExperiencia(experiencia)"></app-delete>
                                     </div>
+                                   
                                 </div>
+                                <a [href]="experiencia.sitioWeb" class="btn btn-primary">Visitar sitio web</a>
                             </div>
                         </div>
                     </div>
@@ -86,5 +93,16 @@
 
     </div>
 </section>
-<app-editar-educacion [item]="modificarEduacion" [title]="'Editar Eduacion'" [id]="'editarEduacion'" [guardar]="true" (editar)="editarEduacion($event)" ></app-editar-educacion>
-<app-editar-educacion [title]="'Agregar Eduacion'" [id]="'agregarEducacion'" [guardar]="false" (editar)="agregarEducacion($event)"></app-editar-educacion>
+
+
+<app-editar-educacion [item]="modificarEducacion" [title]="'Editar Eduacion'" [id]="'editarEduacion'" [guardar]="true"
+    (editar)="editarEduacion($event)"></app-editar-educacion>
+<app-editar-educacion [title]="'Agregar Eduacion'" [id]="'agregarEducacion'"
+    (editar)="agregarEducacion($event)"></app-editar-educacion>
+
+
+<app-editar-experiencias [id]="'agregarExperiencias'" [title]="'Agregar una experiencia'"
+    (editar)="agregarExperiencia($event)"></app-editar-experiencias>
+
+<app-editar-experiencias [item]="modificarExperiencia" [id]="'editarExperiencias'" [title]="'Editar una experiencia'"
+    (editar)="EditarExperiencia($event)" [guardar]="true"></app-editar-experiencias>

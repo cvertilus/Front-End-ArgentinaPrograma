@@ -15,12 +15,7 @@ export class EditarEducacionComponent {
   @Input() title!: string;
   @Input() id: any;
   @Output() editar = new EventEmitter<Educacion>();
-  
-
   @Input() guardar: boolean = false;
-
-
-
 
   constructor(private _builder: FormBuilder) {
 

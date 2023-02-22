@@ -11,12 +11,20 @@ import { Experiencia } from './experiencias';
 })
 export class ExperienciasComponent implements OnInit {
 
+
   experienciasList!: Experiencia[];
   educacionList!: Educacion[];
-  constructor(private experiencias: ExperienciaService, private _educacionService: EducacionService) { }
+  experianciasTitle: string = 'Experiencias';
+  educacionTitle: string = 'Educacion';
+  title: string = 'Experiencias y Educacion';
+  modificarEducacion!: Educacion
+  modificarExperiencia!:Experiencia
+
+
+  constructor(private _experienciaService: ExperienciaService, private _educacionService: EducacionService) { }
 
   ngOnInit(): void {
-    this.experiencias.obtenerDatos().subscribe(datos => {
+    this._experienciaService.obtenerDatos().subscribe(datos => {
       this.experienciasList = datos;
     })
 
@@ -25,22 +33,13 @@ export class ExperienciasComponent implements OnInit {
     })
   }
 
-
-
-  experianciasTitle: string = 'Experiencias';
-  educacionTitle: string = 'Educacion';
-  title: string = 'Experiencias y Educacion';
-  modificarEduacion!: Educacion
-
-  public obtenerDatos(dato: Educacion) {
-    this.modificarEduacion = dato
+  public obtenerDatosEducacion(dato: Educacion) {
+    this.modificarEducacion = dato
   }
 
   private agregarEducacionLista(educacion: Educacion) {
     educacion.id = this.educacionList.length + 1
     this.educacionList = [... this.educacionList, educacion]
-  
-
   }
 
   public agregarEducacion(nuevoEducacion: Educacion) {
@@ -60,21 +59,57 @@ export class ExperienciasComponent implements OnInit {
     }
   }
 
-
   public editarEduacion(actual: Educacion) {
     this.actualizarEducacion(actual)
     this._educacionService.updateEduacion(actual).subscribe()
-
   }
 
-
-  
   public onDelete(educacion: Educacion) {
-    this.educacionList = this.educacionList.filter(item => item.id !== educacion.id)
-    this._educacionService.deleteEducacion(educacion).subscribe()
-    
+    this._educacionService.deleteEducacion(educacion).subscribe(data => {
+      this.educacionList = this.educacionList.filter(item => item.id !== educacion.id)
+    })
   }
 
+  public obtenerDatosExperiencias(dato: Experiencia) {
+    this.modificarExperiencia = dato;
+  }
+
+  public  EditarExperiencia(datos: Experiencia) {
+    this._editarExperiencia(datos)
+    this._experienciaService.actualizarExperiencia(datos).subscribe()
+  }
+
+  private _editarExperiencia(datos:Experiencia){
+    for(let item of this.experienciasList){
+      if(item.id != datos.id) continue;
+      item.adress = datos.adress
+      item.desde = datos.desde
+      item.empresa = datos.empresa
+      item.hasta = datos.hasta
+      item.id = datos.id
+      item.puesto = datos.puesto
+      item.sitioWeb = datos.sitioWeb
+    }
+
+  }
+
+  private _agregarExperienciaLista(nuevaExp:Experiencia){
+    nuevaExp.id = this.experienciasList.length + 1
+    this.experienciasList = [...this.experienciasList,nuevaExp]
+  }
+
+  public agregarExperiencia(nuevaExp:Experiencia){
+    this._agregarExperienciaLista(nuevaExp);
+    this._experienciaService.agregarExperiencia(nuevaExp).subscribe(data =>{
+      this.experienciasList = data
+    })
 
 
+  }
+
+  public eliminarExperiencia(eliminarExp:Experiencia){
+    this._experienciaService.eliminarExperiencia(eliminarExp).subscribe(data =>{
+      this.experienciasList = this.experienciasList.filter(item => item.id !== eliminarExp.id)})
+
+  }
 }
