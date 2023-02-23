@@ -20,11 +20,11 @@ section{
 }
 
 .content > .editar{
-    transform: translateY(-50px);
+    transform: translateY(-20px);
     transition: all .5s ease-in;
 }
 .content > .delete{
-    transform: translateY(50px);
+    transform: translateY(15px);
     transition: all .5s ease-in;
 }
 

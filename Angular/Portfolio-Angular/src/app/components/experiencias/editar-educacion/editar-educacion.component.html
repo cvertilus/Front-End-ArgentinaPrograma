@@ -5,12 +5,12 @@
         <div class="modal-content">
             <div class="modal-header bg-info ">
                 <h1 class="modal-title fs-1 fw-bolder fw-16" id="exampleModalLabel">{{title}}</h1>
-                <button type="button" class="btn-close  bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close  bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-info-subtle fs-5 fw-bolder">
                 <form [formGroup]="editarForm" (ngSubmit)="onGuardar(editarForm.value) ">
 
-                    <div class="mb-3 text-uppercase ">
+                    <div class="mb-3  ">
                         <label for="establecimiento" class="form-label">Lugar de estudio</label>
                         <input type="text" class="form-control" id="esta" formControlName="establecimiento"  value={{item?.establecimiento}}>
                     </div>

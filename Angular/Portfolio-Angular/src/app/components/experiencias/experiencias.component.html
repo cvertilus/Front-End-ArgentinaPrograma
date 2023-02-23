@@ -59,15 +59,16 @@
                 </div>
                 <div class="row gy-4">
                     <div class="col-12" *ngFor="let experiencia of experienciasList">
-                        <div class="card bg-info border-0 shadow-effect" style="border-radius:10px" data-aos="fade-up"
+                        <div class="card bg-info border-0 shadow-effect text-center" style="border-radius:10px" data-aos="fade-up"
                             data-aos-delay="700">
-                            <h2>{{experiencia.empresa}}</h2>
+                            <h3 class="pt-1">{{experiencia.puesto}}</h3>
                             <div class="card-body">
-                                <h1 class="card-title">{{experiencia.puesto}}</h1>
                                 <p class="card-text">
-                                    {{experiencia.desde}}<br>
-                                    {{experiencia.hasta}} <br>
-                                    <strong>{{experiencia.adress}}</strong>
+                                    <strong>{{experiencia.empresa}}</strong>
+                                    ({{experiencia.desde}} /
+                                    {{experiencia.hasta}} )<br>
+
+                                    {{experiencia.adress}}
                                 </p>
 
                                 
@@ -97,7 +98,7 @@
 
 <app-editar-educacion [item]="modificarEducacion" [title]="'Editar Eduacion'" [id]="'editarEduacion'" [guardar]="true"
     (editar)="editarEduacion($event)"></app-editar-educacion>
-<app-editar-educacion [title]="'Agregar Eduacion'" [id]="'agregarEducacion'"
+<app-editar-educacion [title]="'Agregar Educacion'" [id]="'agregarEducacion'"
     (editar)="agregarEducacion($event)"></app-editar-educacion>
 
 

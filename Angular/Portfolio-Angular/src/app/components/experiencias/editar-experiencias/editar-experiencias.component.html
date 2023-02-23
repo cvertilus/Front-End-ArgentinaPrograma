@@ -3,11 +3,11 @@
   ">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-info">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h1>
-                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close  bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body bg-info-subtle fs-5 fw-bolder">
                 <form [formGroup]="editarForm" (ngSubmit)="onGuardar(editarForm.value) ">
 
                     <div class="mb-3">
