@@ -1,4 +1,5 @@
 export interface Skill{
     "lenguajeSkill":string,
-    "porcentaje":number
+    "porcentaje":number,
+    "id":number
 }

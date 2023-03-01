@@ -15,4 +15,15 @@ export class SkillService {
     return this.http.get<Skill[]>(this.apiUrl);
   }
 
+  public updateSkill(data:Skill) :Observable<Skill>{
+    const url = `${this.apiUrl}/${data.id}`
+    return this.http.put<Skill>(url,data)
+  }
+
+  public eliminarSkill(data:Skill):Observable<Skill>{
+    const url = `${this.apiUrl}/${data.id}`
+    return this.http.delete<Skill>(url)
+
+  }
+
 }

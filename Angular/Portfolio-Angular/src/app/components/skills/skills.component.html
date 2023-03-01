@@ -14,17 +14,16 @@
             </div>
 
             <div class="col-lg-8">
-                <div class="skill-content" *ngFor="let skill of skillList" data-aos="fade-left"
-                data-aos-delay="800">
-                    <div class="progress mb-3 me content" style="height: 35px ; width: 100%" >
+                <div class="skill-content" *ngFor="let skill of skillList" data-aos="fade-left" data-aos-delay="800">
+                    <div class="progress mb-3 me content" style="height: 35px ; width: 100%">
                         <div class="bg-info text-center fw-bold pt-2" style="width:20%">{{skill.lenguajeSkill}}</div>
                         <div class="progress-bar progress-bar-striped align-items-end" role="progressbar"
                             [ngStyle]="{'width':skill.porcentaje -20 + '%'}" aria-valuemin="0" aria-valuemax="100">
                             {{skill.porcentaje}}%</div>
                     </div>
-                    <div class="skill-overlay"  >
-                        <app-editar></app-editar>
-                        <app-delete></app-delete>
+                    <div class="skill-overlay">
+                        <app-editar data-bs-toggle="modal" data-bs-target="#editarSkill" (click)="obtenerDatos(skill)"></app-editar>
+                        <app-delete (click)="eliminarSkill(skill)"></app-delete>
                     </div>
 
                 </div>
@@ -35,3 +34,4 @@
     </div>
 
 </section>
+<app-modificar-skill [id]="'editarSkill'" [title]="'Editar Skill'" [item]="datoClick" (datos)="editarSkill($event)" [guardar]="true"></app-modificar-skill>

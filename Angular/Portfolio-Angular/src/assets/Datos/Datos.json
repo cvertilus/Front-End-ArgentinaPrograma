@@ -50,35 +50,28 @@
   "Skills": [
     {
       "lenguajeSkill": "html",
-      "porcentaje": 70
+      "porcentaje": 80,
+      "id": 1
     },
     {
       "lenguajeSkill": "css",
-      "porcentaje": 60
+      "porcentaje": 60,
+      "id": 2
     },
     {
       "lenguajeSkill": "javaScript",
-      "porcentaje": 55
+      "porcentaje": 55,
+      "id": 3
     },
     {
       "lenguajeSkill": "Angular",
-      "porcentaje": 70
+      "porcentaje": 70,
+      "id": 4
     },
     {
       "lenguajeSkill": "typeScript",
-      "porcentaje": 65
-    },
-    {
-      "lenguajeSkill": "C",
-      "porcentaje": 70
-    },
-    {
-      "lenguajeSkill": "java",
-      "porcentaje": 75
-    },
-    {
-      "lenguajeSkill": "Python",
-      "porcentaje": 80
+      "porcentaje": 65,
+      "id": 5
     }
   ],
   "Proyectos": [

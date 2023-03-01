@@ -104,7 +104,6 @@ export class ExperienciasComponent implements OnInit {
       this.experienciasList = data
     })
 
-
   }
 
   public eliminarExperiencia(eliminarExp:Experiencia){

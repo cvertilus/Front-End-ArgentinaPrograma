@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-modificar-skill',
@@ -9,19 +10,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class ModificarSkillComponent {
   Formulario: FormGroup;
   @Input() item: any;
-  
   @Input() id: any;
   @Input() title: any;
+  @Input() guardar: boolean = false;
+
+  @Output() datos = new EventEmitter<any>();
+
   constructor(private _formbuilder : FormBuilder){
     this.Formulario = this._formbuilder.group({
-
+      lenguajeSkill: ["",Validators.required],
+      porcentaje: ["",Validators.required]
     })
-
   }
 
-
-  onEnviar(arg0: any) {
-    throw new Error('Method not implemented.');
+  onEnviar(dato: any) {
+    if(this.guardar) dato.id = this.item.id
+   
+    this.datos.emit(dato);
   }
 
 }
