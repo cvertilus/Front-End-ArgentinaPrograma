@@ -41,6 +41,14 @@ export class SkillsComponent implements OnInit {
     })
   }
 
+  public agregarSkill(dato:Skill){
+    dato.id = this.skillList.length + 1;
+    this.skillList = [...this.skillList, dato]
+    this.serviceSkill.agregarSkill(dato).subscribe(item => {
+      this.skillList = item})
+
+  }
+
 }
 
 

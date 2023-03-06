@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditarExperienciasComponent } from './components/experiencias/editar-experiencias/editar-experiencias.component';
 import { EditarEducacionComponent } from './components/experiencias/editar-educacion/editar-educacion.component';
 import { ModificarSkillComponent } from './components/skills/modificar-skill/modificar-skill.component';
+import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ModificarSkillComponent } from './components/skills/modificar-skill/mod
         EditarExperienciasComponent,
         EditarEducacionComponent,
         ModificarSkillComponent,
+        EditarProyectosComponent,
      
         
         

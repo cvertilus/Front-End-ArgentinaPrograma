@@ -7,6 +7,7 @@ import { Skill } from 'src/app/components/skills/skill';
   providedIn: 'root'
 })
 export class SkillService {
+  
   private apiUrl="http://localhost:5000/Skills"
 
   constructor(private http:HttpClient) { }
@@ -24,6 +25,10 @@ export class SkillService {
     const url = `${this.apiUrl}/${data.id}`
     return this.http.delete<Skill>(url)
 
+  }
+
+  agregarSkill(dato: Skill):Observable<Skill[]> {
+    return this.http.post<Skill[]>(this.apiUrl,dato);
   }
 
 }

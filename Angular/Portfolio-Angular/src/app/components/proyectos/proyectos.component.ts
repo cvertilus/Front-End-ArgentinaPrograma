@@ -8,7 +8,9 @@ import { Proyecto } from './proyectos';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit{
+
   proyectoList: Proyecto[] = [];
+  itemProyecto!: Proyecto;
   constructor (private servicePorject:ProyectoService){}
   ngOnInit(): void {
     this.servicePorject.obtenerDatos().subscribe(datos => {
@@ -16,5 +18,18 @@ export class ProyectosComponent implements OnInit{
     })
     
   }
+  public obtenerPoryecto(clikeado:Proyecto){
+    this.itemProyecto = clikeado;
+  }
+
+  public agregarProyectos(dato: Proyecto) {
+    dato.id = this.proyectoList.length + 1
+    this.proyectoList = [...this.proyectoList,dato]
+    this.servicePorject.agregarProyecto(dato).subscribe(data =>{
+      this.proyectoList = data
+    })
+    
+    
+    }
 
 }

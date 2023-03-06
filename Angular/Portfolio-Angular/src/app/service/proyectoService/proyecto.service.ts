@@ -9,9 +9,15 @@ import { Proyecto } from 'src/app/components/proyectos/proyectos';
 export class ProyectoService {
   private apiUrl = "http://localhost:5000/Proyectos"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  obtenerDatos():Observable<Proyecto[]>{
+  public obtenerDatos(): Observable<Proyecto[]> {
     return this.http.get<Proyecto[]>(this.apiUrl);
   }
+
+  public agregarProyecto(proyecto: Proyecto): Observable<Proyecto[]> {
+    return this.http.post<Proyecto[]>(this.apiUrl, proyecto);
+  }
+
+
 }

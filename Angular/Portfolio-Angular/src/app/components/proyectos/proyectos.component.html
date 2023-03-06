@@ -5,7 +5,7 @@
                 <h1 class="display-4 fst-normal text-uppercase" data-aos="fade-left" data-aos-delay="300">
                     Proyectos</h1>
 
-                <app-agregar></app-agregar>
+                <app-agregar data-bs-toggle="modal" data-bs-target="#agregarProyectos"></app-agregar>
 
 
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
@@ -50,3 +50,5 @@
     </div>
 
 </section>
+
+<app-editar-proyectos [id]="'agregarProyectos'" [title]="'Agregar Proyectos'"  (datos)="agregarProyectos($event)"></app-editar-proyectos>

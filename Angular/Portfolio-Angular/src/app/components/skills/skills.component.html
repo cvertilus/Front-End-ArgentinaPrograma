@@ -4,6 +4,8 @@
             <div class="col-12 text-center pb-5">
                 <h1 class="display-4 fst-normal text-uppercase fw-bold" data-aos="fade-left" data-aos-delay="300">
                     Skills</h1>
+                <app-agregar data-bs-toggle="modal" data-bs-target="#agregarSkill" data-aos="fade-up"
+                    data-aos-delay="500"></app-agregar>
                 <div class="line" data-aos="fade-up" data-aos-delay="500"></div>
             </div>
         </div>
@@ -22,16 +24,19 @@
                             {{skill.porcentaje}}%</div>
                     </div>
                     <div class="skill-overlay">
-                        <app-editar data-bs-toggle="modal" data-bs-target="#editarSkill" (click)="obtenerDatos(skill)"></app-editar>
+                        <app-editar data-bs-toggle="modal" data-bs-target="#editarSkill"
+                            (click)="obtenerDatos(skill)"></app-editar>
                         <app-delete (click)="eliminarSkill(skill)"></app-delete>
                     </div>
 
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </section>
-<app-modificar-skill [id]="'editarSkill'" [title]="'Editar Skill'" [item]="datoClick" (datos)="editarSkill($event)" [guardar]="true"></app-modificar-skill>
+
+
+<app-modificar-skill [id]="'editarSkill'" [title]="'Editar Skill'" [item]="datoClick" (datos)="editarSkill($event)"
+    [guardar]="true"></app-modificar-skill>
+<app-modificar-skill [id]="'agregarSkill'" [title]="'Agregar Skill'"
+    (datos)="agregarSkill($event)"></app-modificar-skill>
