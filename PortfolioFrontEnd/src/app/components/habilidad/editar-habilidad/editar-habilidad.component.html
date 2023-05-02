@@ -1,0 +1,32 @@
+<div class="modal fade" id="{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+                <button type="button" class=" btn btn-close btn-danger" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-primary">
+                <form class="form-control mb-0 pt-3" [formGroup]="Formulario" (ngSubmit)="onEnviar(Formulario.value)">
+                    <div class="mb-3  ">
+                        <label for="lenguaje" class="form-label">Lenguaje</label>
+                        <input type="text" class="form-control" id="esta" formControlName="lenguajedeProgramacion"
+                            value={{item?.lenguajedeProgramacion}}>
+                    </div>
+
+                    <div class="mb-3  ">
+                        <label for="porcentaje" class="form-label">Porcentaje de conocimiento</label>
+                        <input type="number" class="form-control" id="porcentaje " formControlName="porcentajeDeConocimiento" min="20"
+                            max="100" value={{item?.porcentajeDeConocimiento}}>
+                    </div>
+
+
+                    <div class="pt-2">
+                        <button class="btn btn-success w-100" [disabled]="Formulario.invalid" type="submit"
+                            data-bs-dismiss="modal" aria-label="Close">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

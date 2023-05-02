@@ -1,0 +1,28 @@
+<div class="modal fade" id="{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+                <button type="button" class=" btn btn-close btn-danger" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-primary">
+                <form class="form-control mb-0 pt-3" [formGroup]="editarFormulario"
+                    (ngSubmit)="onEnviar(editarFormulario.value)">
+                    <div class="mb-3" *ngIf="foto">
+                        <label for="foto" class="form-label">Ingrese enlace para la foto</label>
+                        <input type="text" class="form-control" id="foto" formControlName="foto_perfil" >
+                    </div>
+                    <div class="mb-3" *ngIf="aboutMe">
+                        <label for="aboutMe" class="form-label">Ingresar los datos</label>
+                        <input type="text" class="form-control" id="about_me" value={{item?.about_me}} formControlName="about_me">
+                    </div>
+                    <div class="pt-2">
+                        <button class="btn btn-success w-100" [disabled]="editarFormulario.invalid" type="submit"
+                            data-bs-dismiss="modal" aria-label="Close">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

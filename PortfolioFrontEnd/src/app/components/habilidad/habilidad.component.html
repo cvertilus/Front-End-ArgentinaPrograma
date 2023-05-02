@@ -1,0 +1,44 @@
+<section class="full-height">
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 text-center pb-5">
+                <h1 class="display-4 fst-normal text-uppercase fw-bold">
+                    Habilidad</h1>
+                <app-button-agregar data-bs-toggle="modal" data-bs-target="#pruebas"></app-button-agregar>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 pb-3">
+                <img src="/assets/img/Habilidad_img.webp" alt="Habilidad-img" class="img-fluid rounded-circle"
+                    style="height: 100% ;border:5px solid rgb(144, 144, 248)">
+            </div>
+
+            <div class="col-lg-8">
+                <div class="habilidad-content" *ngFor="let Habilidad of HabilidadList">
+                    <div class="progress mb-3 me content" style="height: 35px ; width: 100%">
+                        <div class="bg-info text-center fw-bold pt-2" style="width:20%">
+                            {{Habilidad.lenguajedeProgramacion}}</div>
+                        <div class="progress-bar progress-bar-striped align-items-end" role="progressbar"
+                            [ngStyle]="{'width':Habilidad.porcentajeDeConocimiento -20 + '%'}" aria-valuemin="0"
+                            aria-valuemax="100">
+                            {{Habilidad.porcentajeDeConocimiento}}%</div>
+                    </div>
+                    <div class="habilidad-overlay">
+                        <app-button-editar data-bs-toggle="modal" data-bs-target="#editarHabilidad"
+                            (click)="habilidadEditar(Habilidad)"></app-button-editar>
+                        <app-button-eliminar (click)="eliminarHabilidad(Habilidad)"></app-button-eliminar>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<app-editar-habilidad [id]="'editarHabilidad'" [title]="'Editar Habilidad'" [item]="habilidadSelecionado"
+    (datosIngresado)="editarHabilidad($event)"></app-editar-habilidad>
+
+<app-editar-habilidad [id]="'pruebas'" [title]="'Agregar Habilidad'"
+    (datosIngresado)="agregarHabilidad($event)"></app-editar-habilidad>

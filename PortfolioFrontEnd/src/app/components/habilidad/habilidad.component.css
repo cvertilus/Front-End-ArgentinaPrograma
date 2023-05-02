@@ -1,0 +1,28 @@
+section {
+    background-image: linear-gradient(rgba(29, 30, 30, 0.246), rgba(137, 168, 190, 0.545), rgba(3, 48, 81, 0.545));
+    
+}
+
+.habilidad-content {
+    overflow: hidden;
+    position: relative;
+}
+
+.habilidad-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+.habilidad-content:hover>.habilidad-overlay {
+    opacity: 1;
+
+}
+
+.habilidad-content:hover>.content {
+    margin-top: 30px;
+
+}

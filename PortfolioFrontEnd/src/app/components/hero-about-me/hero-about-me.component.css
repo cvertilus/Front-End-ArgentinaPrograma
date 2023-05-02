@@ -1,0 +1,27 @@
+section{
+    background-image: linear-gradient(rgba(29, 30, 30, 0.246), rgba(137, 168, 190, 0.545),rgba(3, 48, 81, 0.545));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--blue);
+  }
+
+.editar{
+    opacity: 0;
+}
+
+.foto:hover 
+.editar
+{
+    opacity: 1;
+}
+
+.aboutme:hover 
+.editar
+{
+    opacity: 1;
+}

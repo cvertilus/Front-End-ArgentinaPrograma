@@ -1,0 +1,9 @@
+/* Set the hero image */
+.home{
+    background-image: linear-gradient(rgba(29, 30, 30, 0.246), rgba(137, 168, 190, 0.545),rgba(3, 48, 81, 0.545)),url("/assets/img/homePageImg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Style the hero text */
+

@@ -1,0 +1,39 @@
+<div class="container text-center d-flex text-primary">
+    <h3 class="me-3 text-uppercase text-decoration-underline fw-bold">
+        {{title}}
+    </h3>
+    <app-button-agregar data-bs-toggle="modal" data-bs-target="#agregarExperiencia"></app-button-agregar>
+</div>
+<div class="row gy-3">
+    <div class="col-12 pt-5 gy-3">
+        <div class="card mb-3" *ngFor="let experiencia of experienciaList">
+            <div class="bg-gradient shadow-effect text-center  p-3 experienciaCard">
+                <h3 class="fw-bolder">
+                    {{experiencia.nombreEstablecimiento}}
+                </h3>
+                <h4>
+                    {{experiencia.puestoTrabajo}}
+                </h4>
+                <h5> Periodo : {{experiencia.fechaInicio | date:"yyyy-MM-dd"}} / {{experiencia.fechaFinal|
+                    date:"yyyy-MM-dd"}}</h5>
+                <h6 class="fw-lighter">
+                    {{experiencia.direccion}}
+                </h6>
+
+                <div class="overlay justify-content-center d-flex ">
+                    <app-button-editar class="me-2" (click)="editarExperienciaSelectionada(experiencia)"
+                        data-bs-toggle="modal" data-bs-target="#editarExperiencia"></app-button-editar>
+                    <app-button-eliminar (click)="eliminarExperiencia(experiencia)"></app-button-eliminar>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<app-editar-experiencia [title]="'Agregar nueva Experiencia'" [id]="'agregarExperiencia'"
+    (datosIngresados)="agregarExperiencia($event)"></app-editar-experiencia>
+
+<app-editar-experiencia [title]="'Editar Experencia'" [id]="'editarExperiencia'"
+    (datosIngresados)="editarExperiencia($event)" [item]=experienciaEditar></app-editar-experiencia>

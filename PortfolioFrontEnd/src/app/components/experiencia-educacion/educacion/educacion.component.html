@@ -1,0 +1,37 @@
+<div class="container text-center d-flex text-primary">
+    <h3 class="me-3 text-uppercase text-decoration-underline fw-bold">
+        {{title}}
+    </h3>
+    <app-button-agregar data-bs-toggle="modal" data-bs-target="#agregarEducacion"></app-button-agregar>
+</div>
+<div class="row gy-3">
+    <div class="col-12 pt-5 gy-3">
+        <div class="card mb-3" *ngFor="let educacion of educacionList">
+            <div class="bg-gradient shadow-effect text-center  p-3 educacionCard">
+                <h3>
+                    {{educacion.nombreInstitucion}}
+                </h3>
+                <h4>
+                    {{educacion.nivelEstudio}}
+                </h4>
+                <h5> Periodo : {{educacion.fechaInicio | date:"yyyy-MM-dd"}} / {{educacion.fechaFinalizacion |
+                    date:"yyyy-MM-dd"}}</h5>
+                <a class="btn btn-primary text-uppercase text-light card-link" [href]="educacion.institucionUrl">Sitio
+                    Web</a>
+
+                <div class="overlay justify-content-center d-flex ">
+                    <app-button-editar class="me-2" (click)="editarEducacionSelectionada(educacion)" data-bs-toggle="modal" data-bs-target="#editarEducacion"></app-button-editar>
+                    <app-button-eliminar (click)="eliminarEducacion(educacion)"></app-button-eliminar>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<app-editar-eduacion [title]="'Agregar nueva Eduacion'" [id]="'agregarEducacion'"
+    (datosIngresados)="agregarEducacion($event)"></app-editar-eduacion>
+
+<app-editar-eduacion [title]="'Editar Eduacion'" [id]="'editarEducacion'"
+    (datosIngresados)="editarEducacion($event)" [item]=educacionEditar></app-editar-eduacion>

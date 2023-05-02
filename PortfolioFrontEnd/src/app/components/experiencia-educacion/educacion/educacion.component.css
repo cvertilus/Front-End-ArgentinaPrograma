@@ -1,0 +1,31 @@
+.educacionCard{
+    border-right: 5px solid var(--bluePrimary);
+    background-image: linear-gradient(rgba(29, 30, 30, 0.246), rgba(137, 168, 190, 0.545),rgba(3, 48, 81, 0.545)) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.educacionCard:hover{
+    border-right: none;
+}
+
+.overlay{
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0,0.5 ), rgba(2, 2, 3, 0.545),rgba(2, 16, 27, 0.545)) !important;
+    align-items: center;
+    opacity: 0;
+}
+
+.educacionCard:hover > .overlay{
+    opacity: 1;
+}

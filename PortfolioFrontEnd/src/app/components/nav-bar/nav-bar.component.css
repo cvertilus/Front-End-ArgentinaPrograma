@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    
+    
+    
+}
+
+.bg-black{
+    background-color:rgba(0, 0, 0, 0);
+}
+
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+
+.nav-link {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--blue) !important;
+}
+
+
+.nav-link:hover {
+    color: whitesmoke!important;
+    /* Set link hover color */
+}
+
+.nav-item {
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.45ms;
+
+
+}
+
+.letras-Noir{
+    filter: invert(.1);
+     -webkit-filter:invert(.1) ;
+     -moz-filter:invert(-1);
+}
