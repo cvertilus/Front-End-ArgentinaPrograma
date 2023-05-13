@@ -4,6 +4,7 @@
 .proyectoItem{
     position: relative;
     overflow: hidden;
+    height: 300px;
 }
 .img{
     width: 100%;
