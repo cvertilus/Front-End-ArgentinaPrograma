@@ -1,16 +1,17 @@
+<app-nav-bar></app-nav-bar>
 <section class="full-height aboutMe">
     <div class="container ">
         <div class="row m-3">
-            <div class="col-lg-12 text-center text-uppercase text-primary fw-bold ">
+            <div class="col-lg-12 text-center text-uppercase text-primary fw-bold pt-4">
                 <h1>{{title}}</h1>
                 <div class="line"></div>
             </div>
         </div>
 
         <div class="row datos">
-            <div class="col-lg-4 foto">
+            <div class="col-lg-4  foto">
                 <img [src]=hero.img_src alt="" class="img-fluid">
-                <div class="editar pt-3">
+                <div class="editar pt-lg-3">
                     <app-button-editar data-bs-toggle="modal" data-bs-target="#editarFoto" class="me-2">
                     </app-button-editar>
                     <app-button-eliminar (click)="eliminarFoto()"></app-button-eliminar>

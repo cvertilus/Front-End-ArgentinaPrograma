@@ -1,1 +1,49 @@
-<p>editar-proyecto works!</p>
+<div class="modal fade" id="{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+                <button type="button" class=" btn btn-close btn-danger" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-primary">
+                <form class="form-control mb-0 pt-3" [formGroup]="formulario" (ngSubmit)="onEnviar(formulario.value)">
+                    <div class="mb-3  ">
+                        <label for="nombre" class="form-label">Nombre del proyecto</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                            value={{item?.nombre}}>
+                    </div>
+                    <div class="mb-3  ">
+                        <label for="lenguajeDeProgramaciion" class="form-label">Lenguaje de programacion</label>
+                        <input type="text" class="form-control" id="lenguaje" formControlName="lenguajeDeProgramaciion"
+                            value={{item?.lenguajeDeProgramaciion}}>
+                    </div>
+
+                    <div class="mb-3  ">
+                        <label for="github_url" class="form-label">Github source</label>
+                        <input type="text" class="form-control" id="github_url" formControlName="github_url"
+                            value={{item?.github_url}}>
+                    </div>
+
+                    <div class="mb-3  ">
+                        <label for="img_src" class="form-label">Image url</label>
+                        <input type="text" class="form-control" id="img_src" formControlName="img_src"
+                            value={{item?.img_src}}>
+                    </div>
+
+                    <div class="mb-3  ">
+                        <label for="descripcion" class="form-label">Descripcion del proyecto</label>
+                        <input type="text" class="form-control" id="descripcio" formControlName="descripcion" maxlength="25"
+                            value={{item?.descripcion}}>
+                    </div>
+
+
+                    <div class="pt-2">
+                        <button class="btn btn-success w-100" [disabled]="formulario.invalid" type="submit"
+                            data-bs-dismiss="modal" aria-label="Close">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

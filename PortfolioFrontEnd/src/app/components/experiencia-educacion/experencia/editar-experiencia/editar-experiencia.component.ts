@@ -10,6 +10,7 @@ import { FormGroup, FormBuilder, Validators, RequiredValidator } from '@angular/
 export class EditarExperienciaComponent implements OnInit {
 
   @Input() title: any
+  @Input() editar: Boolean = false;
   @Input() item?: Experiencia
   @Output() datosIngresados = new EventEmitter<Experiencia>()
   @Input() id: any
@@ -19,18 +20,33 @@ export class EditarExperienciaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.formulario = this.form.group({
-  
-      nombreEstablecimiento:[this.item?.nombreEstablecimiento,Validators.required],
-      puestoTrabajo:[this.item?.puestoTrabajo,Validators.required],
-      fechaInicio: [this.item?.fechaInicio,Validators.required] ,
-      fechaFinal: [this.item?.fechaFinal,Validators.required] ,
-      direccion:[this.item?.direccion,Validators.required]
+    if (!this.editar) {
+      this.formulario = this.form.group({
 
-    })
+        nombreEstablecimiento: ['', Validators.required],
+        puestoTrabajo: ['', Validators.required],
+        fechaInicio: ['', Validators.required],
+        fechaFinal: ['', Validators.required],
+        direccion: ['', Validators.required]
+
+      })
+
+    } else {
+      this.formulario = this.form.group({
+
+        nombreEstablecimiento: [this.item?.nombreEstablecimiento],
+        puestoTrabajo: [this.item?.puestoTrabajo],
+        fechaInicio: [this.item?.fechaInicio],
+        fechaFinal: [this.item?.fechaFinal],
+        direccion: [this.item?.direccion]
+      })
+
+    }
+
   }
 
-  public onEnviar(experiencia:Experiencia){
+
+  public onEnviar(experiencia: Experiencia) {
     this.datosIngresados.emit(experiencia)
   }
 

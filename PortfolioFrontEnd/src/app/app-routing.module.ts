@@ -7,18 +7,23 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditarHeroAboutMeComponent } from './components/hero-about-me/editar-hero-about-me/editar-hero-about-me.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegistroComponent } from './components/auth/registro/registro.component';
+import { PortfolioGuardService } from './service/Guards/portfolio-guard.service';
+
 
 
 const routes: Routes = [
-  {path: '', component:HomeComponent},
+  {path: '', component:LoginComponent},
+  {path: 'login', component:LoginComponent},
   {path: 'home', component:HomeComponent},
-  {path: 'hero', component:HeroAboutMeComponent},
-  {path:'experienciaEducacion',component:ExperienciaEducacionComponent},
-  {path:'habilidad',component:HabilidadComponent},
-  {path:'proyecto',component:ProyectoComponent},
+  {path: 'hero', component:HeroAboutMeComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
+  {path:'experienciaEducacion',component:ExperienciaEducacionComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
+  {path:'habilidad',component:HabilidadComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
+  {path:'proyecto',component:ProyectoComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
   {path:'contact',component:ContactoComponent},
-  
-  
+  {path:'login',component:LoginComponent},
+  {path:'registro',component:RegistroComponent}
 ];
 
 @NgModule({

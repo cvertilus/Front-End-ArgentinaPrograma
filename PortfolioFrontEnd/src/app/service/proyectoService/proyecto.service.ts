@@ -7,7 +7,7 @@ import { Proyecto } from 'src/app/components/proyecto/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  private  url = 'https://localhost:8080/proyecto';
+  private  url = 'https://backendportfolioap-jada.onrender.com/proyecto';
 
   constructor(private http:HttpClient) { }
 

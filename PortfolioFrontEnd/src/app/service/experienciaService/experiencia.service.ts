@@ -7,7 +7,7 @@ import { Experiencia } from 'src/app/components/experiencia-educacion/experencia
   providedIn: 'root'
 })
 export class ExperienciaService {
-  private url ="http://localhost:8080/experiencia"
+  private url ="https://backendportfolioap-jada.onrender.com/experiencia"
 
   constructor(private http:HttpClient) { }
 

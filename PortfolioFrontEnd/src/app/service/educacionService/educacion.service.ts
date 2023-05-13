@@ -7,7 +7,7 @@ import { Educacion } from 'src/app/components/experiencia-educacion/educacion/ed
   providedIn: 'root'
 })
 export class EducacionService {
-  private url = "http://localhost:8080/educacion"
+  private url = "https://backendportfolioap-jada.onrender.com/educacion"
 
   constructor(private http:HttpClient) { }
 

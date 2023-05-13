@@ -16,10 +16,11 @@
                 </h4>
                 <h5> Periodo : {{educacion.fechaInicio | date:"yyyy-MM-dd"}} / {{educacion.fechaFinalizacion |
                     date:"yyyy-MM-dd"}}</h5>
-                <a class="btn btn-primary text-uppercase text-light card-link" [href]="educacion.institucionUrl">Sitio
-                    Web</a>
+                
 
                 <div class="overlay justify-content-center d-flex ">
+                    <a class="btn btn-primary text-uppercase text-light card-link me-4" [href]="educacion.institucionUrl">Sitio
+                        Web</a>
                     <app-button-editar class="me-2" (click)="editarEducacionSelectionada(educacion)" data-bs-toggle="modal" data-bs-target="#editarEducacion"></app-button-editar>
                     <app-button-eliminar (click)="eliminarEducacion(educacion)"></app-button-eliminar>
                 </div>
@@ -34,4 +35,4 @@
     (datosIngresados)="agregarEducacion($event)"></app-editar-eduacion>
 
 <app-editar-eduacion [title]="'Editar Eduacion'" [id]="'editarEducacion'"
-    (datosIngresados)="editarEducacion($event)" [item]=educacionEditar></app-editar-eduacion>
+    (datosIngresados)="editarEducacion($event)" [item]=educacionEditar [editar]="true"></app-editar-eduacion>

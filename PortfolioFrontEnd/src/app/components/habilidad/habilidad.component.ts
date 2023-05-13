@@ -7,7 +7,7 @@ import { Habilidad } from './habiliad';
   templateUrl: './habilidad.component.html',
   styleUrls: ['./habilidad.component.css']
 })
-export class HabilidadComponent implements OnInit{
+export class HabilidadComponent implements OnInit {
   HabilidadList: Habilidad[] = [];
   habilidadSelecionado!: Habilidad;
   habilidadBase: Habilidad = {
@@ -16,56 +16,55 @@ export class HabilidadComponent implements OnInit{
     porcentajeDeConocimiento: 80
   }
 
-  constructor(private habilidadService: HabilidadService){}
-  
+  constructor(private habilidadService: HabilidadService) { }
+
   ngOnInit(): void {
-    this.habilidadService.getHablidad().subscribe(datos =>{
+    this.habilidadService.getHablidad().subscribe(datos => {
       this.cargarDatos(datos)
     })
   }
 
-  private cargarDatos(datos:Habilidad[]){
-    if(datos.length == 0){
-      this.habilidadService.postHabilidad(this.habilidadBase).subscribe(item =>{
+  private cargarDatos(datos: Habilidad[]) {
+    if (datos.length == 0) {
+      this.habilidadService.postHabilidad(this.habilidadBase).subscribe(item => {
         this.habilidadBase = item;
         this.HabilidadList.push(item)
       })
-    }else{
+    } else {
       this.HabilidadList = datos
     }
   }
 
 
   public agregarHabilidad(habilidad: Habilidad) {
-    this.habilidadService.postHabilidad(habilidad).subscribe(dato =>{
-      this.HabilidadList = [...this.HabilidadList,dato]
+    this.habilidadService.postHabilidad(habilidad).subscribe(dato => {
+      this.HabilidadList = [...this.HabilidadList, dato]
     })
   }
 
 
   public editarHabilidad(habilidad: Habilidad) {
     habilidad.id = this.habilidadSelecionado.id
-    for(let hab of this.HabilidadList){
-      if(hab.id!= habilidad.id) continue;
+    for (let hab of this.HabilidadList) {
+      if (hab.id != habilidad.id) continue;
       hab.lenguajedeProgramacion = habilidad.lenguajedeProgramacion
       hab.porcentajeDeConocimiento = habilidad.porcentajeDeConocimiento
     }
     this.habilidadService.putHabiliad(habilidad).subscribe()
   }
- 
-  public eliminarHabilidad(habiliad: Habilidad) {
-    this.habilidadService.deleteHabilidad(habiliad).subscribe(dato =>{
-      this.HabilidadList = this.HabilidadList.filter(item =>{
-        item.id !== dato.id
-      })
-    })
+
+  public eliminarHabilidad(habilidad: Habilidad) {
+    console.log("habilidad selectionada", habilidad)
+    console.log("la lista", this.HabilidadList)
+    this.HabilidadList = this.HabilidadList.filter(item =>  item.id != habilidad.id)
+    this.habilidadService.deleteHabilidad(habilidad).subscribe()
   }
 
 
-  public habilidadEditar(habiliad:Habilidad) {
-    this.habilidadSelecionado = habiliad
-    
+  public habilidadEditar(habilidad: Habilidad) {
+    this.habilidadSelecionado = habilidad
+
   }
-  
+
 
 }

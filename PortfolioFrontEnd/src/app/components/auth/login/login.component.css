@@ -1,0 +1,9 @@
+.loginItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.login{
+    background-image: linear-gradient(rgba(29, 30, 30, 0.246), rgba(137, 168, 190, 0.545), rgba(3, 48, 81, 0.545));
+}

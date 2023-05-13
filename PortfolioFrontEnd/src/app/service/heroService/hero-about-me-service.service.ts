@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class HeroAboutMeServiceService {
   
-  private url = "http://localhost:8080/hero";
+  private url = "https://backendportfolioap-jada.onrender.com/hero";
 
   constructor(private http:HttpClient) { }
 

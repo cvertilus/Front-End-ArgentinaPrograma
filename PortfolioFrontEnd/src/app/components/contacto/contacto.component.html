@@ -1,1 +1,52 @@
-<p>contacto works!</p>
+<app-nav-bar></app-nav-bar>
+<section class="full-height">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4 ">
+                <h1 class="text-primary fw-bold pb-lg-2 text-decoration-underline">{{title}}</h1>
+
+                <div class="justify-content-center p-3 ">
+                    <a href="mailto:vertiluscolby@gmail.com" class="text-dark me-3"><i
+                            class="fa-solid fa-envelope fa-2x  "></i></a>
+                    <a href="https://github.com/cvertilus" blank="#" class="me-3 text-dark "><i
+                            class="fa-brands fa-github fa-2x "></i></a>
+                    <a href="http://" class="text-dark"><i class="fa-brands fa-linkedin fa-2x "></i></a>
+
+                </div>
+
+                <a class="btn btn-info  fw-bold text-wrap" href="/assets/img/colbyvertilusCV.pdf" download>Download CV</a>
+
+            </div>
+            <div class="col-lg-8">
+
+                <form class="form-control mb-0 pt-3 bg-transparent text-primary fw-bold fs-4 border-0"
+                    [formGroup]="formulario" (ngSubmit)="onEnviar(formulario.value)">
+                    <div class="mb-3  ">
+                        <label for="Nombre" class="form-label ">Nombre</label>
+                        <input type="text" class="form-control" id="esta" formControlName="nombre"
+                            placeholder="Ingrese su nombre">
+                    </div>
+
+                    <div class="mb-3  ">
+                        <label for="email" class="form-label">Ingrese su email</label>
+                        <input type="email" class="form-control" id="email " formControlName="email"
+                            placeholder="abcd@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Su mensaje</label>
+                        <textarea name="mensaje" id="" placeholder="su mensaje" cols="auto" rows="auto"
+                            formControlName="mensaje" class="w-100 form-control"></textarea>
+                    </div>
+
+
+                    <div class="pt-2">
+                        <button class="btn btn-success w-100" [disabled]="formulario.invalid" type="submit"
+                            reset>Enviar</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</section>

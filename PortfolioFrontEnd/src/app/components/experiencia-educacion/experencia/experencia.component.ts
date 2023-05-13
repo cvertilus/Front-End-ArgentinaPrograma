@@ -66,10 +66,8 @@ export class ExperenciaComponent implements OnInit{
   }
 
   public eliminarExperiencia(experiencia:Experiencia) {
-    this.experienciaSerice.deleteExperiencia(experiencia).subscribe(dato =>{
-      this.experienciaList.filter(item => item.id !== dato.id)
-    })
-    
+    this.experienciaList = this.experienciaList.filter(item => item.id !== experiencia.id)
+    this.experienciaSerice.deleteExperiencia(experiencia).subscribe() 
   }
 
   public editarExperienciaSelectionada(experencia:Experiencia) {

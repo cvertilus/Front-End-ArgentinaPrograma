@@ -7,7 +7,7 @@ import { Habilidad } from 'src/app/components/habilidad/habiliad';
   providedIn: 'root'
 })
 export class HabilidadService {
-  private url = 'http://localhost:8080/habilidad'
+  private url = 'https://backendportfolioap-jada.onrender.com/habilidad'
 
   constructor(private http:HttpClient) { }
 

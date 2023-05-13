@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeroAboutMeComponent } from './components/hero-about-me/hero-about-me.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { HabilidadComponent } from './components/habilidad/habilidad.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/auth/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ExperienciaEducacionComponent } from './components/experiencia-educacion/experiencia-educacion.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -28,6 +28,13 @@ import { EditarProyectoComponent } from './components/proyecto/editar-proyecto/e
 import { HabilidadService } from './service/habilidadService/habilidad.service';
 import { ProyectoService } from './service/proyectoService/proyecto.service';
 import { ExperienciaService } from './service/experienciaService/experiencia.service';
+import { EmailService } from './service/emailService/email.service';
+import { RegistroComponent } from './components/auth/registro/registro.component';
+import { AuthService } from './service/authService/auth.service';
+import { TokenService } from './service/tokenService/token.service';
+import { PortfolioGuardService } from './service/Guards/portfolio-guard.service';
+import { PortfolioInterceptorService, interceptorProvider } from './service/interceptor/portfolio-interceptor.service';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +56,9 @@ import { ExperienciaService } from './service/experienciaService/experiencia.ser
     ButtonEliminarComponent,
     ButtonAgregarComponent,
     EditarHabilidadComponent,
-    EditarProyectoComponent
+    EditarProyectoComponent,
+    RegistroComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +72,12 @@ import { ExperienciaService } from './service/experienciaService/experiencia.ser
     EducacionService,
     HabilidadService,
     ProyectoService,
-    ExperienciaService
-
+    ExperienciaService,
+    EmailService,
+    AuthService,
+    TokenService,
+    PortfolioGuardService,
+    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })

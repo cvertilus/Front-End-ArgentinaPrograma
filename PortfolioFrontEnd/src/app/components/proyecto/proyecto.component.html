@@ -1,1 +1,53 @@
-<p>proyecto works!</p>
+
+<section class="full-height proyecto">
+    <div class="container">
+        <div class="row pb-4">
+            <div class="col-12 text-center  text-primary">
+                <h1 class="text-uppercase fw-bold">
+                    {{title}}
+                </h1>
+                <div class="line"></div>
+                <app-button-agregar data-bs-toggle="modal" data-bs-target="#agregarProyecto"></app-button-agregar>
+            </div>
+        </div>
+        <div class="row gy-3">
+            <div class="col-lg-4" *ngFor="let proyecto of proyectoList">
+                <div class="proyectoItem">
+                        <img [src]='proyecto.img_src' [alt]='proyecto.nombre' class="img-fluid">
+                    <div class="overlay justify-content-center text-center ">
+                        <h3>
+                            {{proyecto.nombre}}
+                        </h3>
+                        <h4>
+                            Lenguaje: <span class="text-primary">{{proyecto.lenguajeDeProgramaciion}}</span>
+                        </h4>
+                        <a class="btn btn-primary text-uppercase text-light mb-2"
+                            [href]="proyecto.github_url">Github</a>
+                        <div class="pt-2">
+                            <app-button-editar (click)="cargarDatoSectionado(proyecto)" class="me-2"
+                                data-bs-toggle="modal" data-bs-target="#editarProyecto"></app-button-editar>
+
+                            <app-button-eliminar (click)="eliminarProyecto(proyecto)"></app-button-eliminar>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <a class="btn btn-primary" href="https://github.com/cvertilus">
+                    More
+                </a>
+
+            </div>
+            
+
+        </div>
+    </div>
+
+</section>
+<app-editar-proyecto [id]="'agregarProyecto' " [title]="'Agregar Proyecto'"
+    (datosIngresado)="agregarProyecto($event)"></app-editar-proyecto>
+<app-editar-proyecto [id]="'editarProyecto'" [title]="'Editar Proyecto'" [item]="proyectoSelectionado"
+    (datosIngresado)="editarProyecto($event)"></app-editar-proyecto>
+
