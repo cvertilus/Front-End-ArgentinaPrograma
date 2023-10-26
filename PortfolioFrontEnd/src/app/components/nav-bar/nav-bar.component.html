@@ -1,16 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
     <div class="container-fluid">
 
-        <a class="navbar-brand " href="">
-           <span><h1>VC</h1></span>
+        <a class="navbar-brand   " href="">
+            <span class= >
+                <h1 class="bg-light rounded-bottom rounded-3 p-1 text-info">VC</h1>
+            </span>
         </a>
 
-        <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs---bluePrimary--bluePrimary="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav  m-auto primary">
+            <ul class="navbar-nav  ms-auto primary">
                 <li class="nav-item active ">
                     <a class="nav-link " routerLink="/home">Home</a>
                 </li>
@@ -30,12 +32,39 @@
                     <a class="nav-link" routerLink="/contact">Contact</a>
                 </li>
             </ul>
-            <div class="ms-auto">
-                <a class="nav-link bg-black" routerLink="/login" *ngIf="!isLogged"><i
-                        class="fa-sharp fa-solid fa-right-to-bracket"></i> Iniciar Sesion </a>
+            <div class="dropdown ms-auto m">
+                <a class="dropdown-toggle" href="#"  data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-sharp fa-solid fa-user fa-2x" style="color: var(--blue);"></i>
+                </a>
 
-                <a class="nav-link" routerLink="login" *ngIf="isLogged" (click)="onLogOut()"><i
-                        class="fa-sharp fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a>
+                <ul class="dropdown-menu bg-dark">
+
+                    <li>
+                        <a class="nav-link bg-black dropdown-item" routerLink="/login" *ngIf="!isLogged">
+                            <i class="fa-sharp fa-solid fa-right-to-bracket">
+
+                            </i>
+                            Iniciar Sesion
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link bg-black dropdown-item" *ngIf="isLogged" (click)="onLogOut()">
+                            <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                            Cerrar Sesion
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="ms-auto">
+
+
+
+
+
             </div>
 
         </div>

@@ -13,7 +13,7 @@ export class HeroAboutMeComponent implements OnInit {
   public hero: HeroAboutMe = {
     apellido: "Vertilus",
     about_me: 'Soy un programador altamente motivado y apasionado/a por el desarrollo de software. Cuento con habilidades sólidas en varios lenguajes de programación, como Java, Python y JavaScript, así como en el uso de diferentes herramientas de desarrollo y entornos de trabajo. Durante mi carrera he participado en diversos proyectos, tanto individuales como en equipo, y he logrado superar varios desafíos técnicos y estratégicos en diferentes etapas del ciclo de desarrollo. Me considero una persona dinámica, proactiva y orientada a resultados, lo que me ha permitido destacarme en mi trayectoria profesional. Además, me gusta aprender constantemente y trabajar en equipo, ya que creo que estas son habilidades fundamentales para el éxito en la industria del software.',
-    img_src: '/assets/img/profile.jpeg',
+    img_src: '/assets/img/profile2.jpg',
     nombre: 'Colby',
     id: 1
   };

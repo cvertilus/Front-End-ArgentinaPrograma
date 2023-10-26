@@ -14,16 +14,50 @@ import { PortfolioGuardService } from './service/Guards/portfolio-guard.service'
 
 
 const routes: Routes = [
-  {path: '', component:LoginComponent},
-  {path: 'login', component:LoginComponent},
-  {path: 'home', component:HomeComponent},
-  {path: 'hero', component:HeroAboutMeComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
-  {path:'experienciaEducacion',component:ExperienciaEducacionComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
-  {path:'habilidad',component:HabilidadComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
-  {path:'proyecto',component:ProyectoComponent,canActivate:[PortfolioGuardService], data: { expectedRol: ['admin', 'user'] }},
-  {path:'contact',component:ContactoComponent},
-  {path:'login',component:LoginComponent},
-  {path:'registro',component:RegistroComponent}
+  {path: '', 
+  component:LoginComponent},
+
+  {path: 'login',
+   component:LoginComponent},
+
+  {path: 'home', 
+  component:HomeComponent},
+
+  {path: 'hero',
+   component:HeroAboutMeComponent,
+  //  canActivate:[PortfolioGuardService], 
+  //  data: { expectedRol: ['admin', 'user'] }
+  },
+
+  {path:'experienciaEducacion',
+  component:ExperienciaEducacionComponent,
+  // canActivate:[PortfolioGuardService], 
+  // data: { expectedRol: ['admin', 'user'] }
+  },
+
+  {path:'habilidad',
+  component:HabilidadComponent,
+  // canActivate:[PortfolioGuardService], 
+  // data: { expectedRol: ['admin', 'user'] }
+  },
+
+  {path:'proyecto',
+  component:ProyectoComponent,
+  // canActivate:[PortfolioGuardService], 
+  // data: { expectedRol: ['admin', 'user'] }
+  },
+  
+  {path:'contact',
+  component:ContactoComponent
+  },
+
+  {path:'login',
+  component:LoginComponent
+  },
+
+  {path:'registro',
+  component:RegistroComponent
+  }
 ];
 
 @NgModule({
