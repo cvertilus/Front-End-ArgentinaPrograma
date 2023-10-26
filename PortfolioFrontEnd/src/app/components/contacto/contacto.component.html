@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-4 ">
-                <h1 class="text-primary fw-bold pb-lg-2 text-decoration-underline">{{title}}</h1>
+                <h1 class="fw-bold pb-lg-2 text-decoration-underline" style="color: var(--blue);">{{title}}</h1>
 
                 <div class="justify-content-center p-3 ">
                     <a href="mailto:vertiluscolby@gmail.com" class="text-dark me-3"><i
@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-8">
 
-                <form class="form-control mb-0 pt-3 bg-transparent text-primary fw-bold fs-4 border-0"
+                <form class="form-control mb-0 pt-3 bg-transparent fw-bold fs-4 border-0 " style="color: var(--blue);"
                     [formGroup]="formulario" (ngSubmit)="onEnviar(formulario.value)">
                     <div class="mb-3  ">
                         <label for="Nombre" class="form-label ">Nombre</label>

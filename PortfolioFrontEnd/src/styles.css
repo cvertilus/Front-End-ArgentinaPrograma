@@ -8,7 +8,7 @@
 :root {
     --blue: #0dcaf0;
     /* --bluePrimary: #0d6efd; */
-    --bluePrimary: #0dcaf0;
+    --bluePrimary: #060cc8;
     --textoParagraph:white;
 
 }
@@ -16,7 +16,7 @@
 .line {
     width: 25%;
     height: 5px;
-    background-color: var(--blue);
+    background-color: var(--bluePrimary);
     margin: 16px auto 24px auto;
 }
 

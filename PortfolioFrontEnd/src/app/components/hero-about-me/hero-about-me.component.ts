@@ -40,7 +40,6 @@ export class HeroAboutMeComponent implements OnInit {
         this.hero = dato
       })
     }
-    console.log(this.hero)
 
   }
  
@@ -50,7 +49,6 @@ export class HeroAboutMeComponent implements OnInit {
    
     this.hero.img_src = dato.foto_perfil;
     this.heroService.editarDatos(this.hero).subscribe(item => {
-      console.log(item)
       this.hero = item
     })
 
@@ -66,7 +64,10 @@ export class HeroAboutMeComponent implements OnInit {
   }
 
   public eliminarFoto() {
-    alert("Por favor debe haber una foto !");
+    this.hero.img_src = '/assets/img/profile2.jpg';
+    this.heroService.editarDatos(this.hero).subscribe(item => {
+      this.hero = item
+    })
   }
 
   public eliminarAboutMe(){
