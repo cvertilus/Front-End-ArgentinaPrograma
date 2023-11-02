@@ -16,7 +16,7 @@ export class AppComponent   implements OnInit{
   constructor(private token:TokenService){}
 
   ngOnInit(): void {
-    alert("Hola soy Colby , queria recordarte que puede tardar un poco en cargar los datos \ndebido que tengo la base de datos en una nube gratuita \n muchas gracias por la visita");
+    alert("Hola soy Colby , queria avisarle que puede tardar un o dos minuto(s) en cargar los datos \ndebido que tengo el backend de forma gratuita ,es un portafolio fullstack \n muchas gracias por la visita");
     if(this.token.getToken()){
       this.isLogged = true;
     }else{
